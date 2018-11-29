@@ -179,3 +179,18 @@ ldapsearch -x -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=Roy Kang,ou=u
 
 # numResponses: 1
 # 여기까지 ============================================================================>
+
+# GitLab 설치
+# docker run --detach \
+#    --hostname gitlab.pettra.com \
+#    --publish 443:443 --publish 80:80 --publish 22:22 \
+#    --name gitlab \
+#    --restart always \
+#    --volume /data/srv/gitlab/config:/etc/gitlab
+#    --volume /data/srv/gitlab/logs:/var/log/gitlab
+#    --volume /data/srv/gitlab/data:/var/opt/gitlab # 여기에 source data에 저장된다.
+#    --volume /etc/localtime:/etc/localtime:ro \
+#    gitlab/gitlab-ce:latest
+
+docker run --detach --hostname gitlab.pettra.com --publish 443:443 --publish 80:80 --publish 22:22 --name gitlab --restart always --volume /data/srv/gitlab/config:/etc/gitlab --volume /data/srv/gitlab/logs:/var/log/gitlab --volume /data/srv/gitlab/data:/var/opt/gitlab --volume /etc/localtime:/etc/localtime:ro gitlab/gitlab-ce:latest
+
