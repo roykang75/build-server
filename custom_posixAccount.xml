@@ -3,12 +3,12 @@
 
 <template>
 <askcontainer>1</askcontainer>
-<description>dogtra.com New User Account</description>
+<description>Pettra New User Account</description>
 <icon>ldap-user.png</icon>
 <invalid>0</invalid>
 <rdn>cn</rdn>
 <!--<regexp>^ou=People,o=.*,</regexp>-->
-<title>dogtra.com: User Account</title>
+<title>Pettra: User Account</title>
 <visible>1</visible>
 
 <objectClasses>
@@ -112,5 +112,4 @@
 	<spacer>1</spacer>
 </attribute>  
 </attributes>
-
 </template>
