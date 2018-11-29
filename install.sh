@@ -72,5 +72,7 @@ ldapsearch -x -H ldap:// -b dc=pettra,dc=com -D "cn=admin,dc=pettra,dc=com" -w P
 
 # phpldapadmin 설치
 docker run --detach --hostname phpldapadmin.pettra.com --publish 6443:443 --name phpldapadmin --restart always --volume /etc/localtime:/etc/localtime:ro --env PHPLDAPADMIN_LDAP_HOSTS=192.168.10.90 osixia/phpldapadmin:0.7.2
+# User 추가를 위한 custom user template를 docker에 upload한다.
+docker cp ./custom_posixAccount.xml phpldapadmin:./var/www/phpldapadmin/templates/creation/
 
 # 브라우져로 phpldapadmin.pettra.com:6443 (or IPAdress:6443)으로 접속
