@@ -77,6 +77,9 @@ docker cp ./custom_posixAccount.xml phpldapadmin:./var/www/phpldapadmin/template
 
 # 브라우져로 phpldapadmin.pettra.com:6443 (or IPAdress:6443)으로 접속
 
+# 사용자 추가 방법은 아래 링크 참고
+# http://blog.hkwon.me/use-openldap-part1/
+
 # 사용자 추가 후 추가한 단순 검색 결과
 #ldapsearch -x -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=admin,dc=pettra,dc=com" -w Pettra@1023
 # 아래와 같은 결과가 출력되어야 한다.
