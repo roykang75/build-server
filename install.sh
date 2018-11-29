@@ -58,3 +58,19 @@ ldapsearch -x -H ldap:// -b dc=pettra,dc=com -D "cn=admin,dc=pettra,dc=com" -w P
 # numResponses: 3
 # numEntries: 2
 # 여기까지
+
+# phpldapadmin 설치
+# docker run --detach \
+#    --hostname phpldapadmin.pettra.com \
+#    --publish 6443:443 \
+#    --name phpldapadmin \
+#    --restart always \
+#    --volume /etc/localtime:/etc/localtime:ro \
+#    --env PHPLDAPADMIN_LDAP_HOSTS=IPAddress \ # internet domain을 기입. 정식 도메인이 없는 경우 반듯이 IP를 입력(192.168.10.81)
+#                                              # hosts 파일에 가라로 등록한 domain address을 기입하는 경우 정상동작하지 않음
+#    osixia/phpldapadmin:0.7.2
+
+# phpldapadmin 설치
+docker run --detach --hostname phpldapadmin.pettra.com --publish 6443:443 --name phpldapadmin --restart always --volume /etc/localtime:/etc/localtime:ro --env PHPLDAPADMIN_LDAP_HOSTS=192.168.10.90 osixia/phpldapadmin:0.7.2
+
+# 브라우져로 phpldapadmin.pettra.com:6443 (or IPAdress:6443)으로 접속
