@@ -202,4 +202,7 @@ docker run --detach --hostname gitlab.pettra.com --publish 443:443 --publish 80:
 # $ cd /data/srv/
 # $ tar xfvz gitlab.tgz # 현재 폴더에 압축을 해제함.
 # PathFinder Pro 소스 받기
+# == SSH 사용
 # $ repo init -u ssh://git@192.168.10.90/pettra/android/platform/manifest.git -b master-pf
+# == HTTP 사용
+# $ repo init -u http://192.168.10.90/pettra/android/platform/manifest.git -b master-pf
