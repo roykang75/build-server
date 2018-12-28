@@ -43,15 +43,15 @@ docker run --detach --hostname ldap.pettra.com --publish 389:389 --publish 689:6
 - openLDAP 검증
 ```
 $ ldapsearch -x -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=admin,dc=pettra,dc=com" -w Pettra@1023
-// extended LDIF
+# extended LDIF
 
-// LDAPv3
-// base <dc=pettra,dc=com> with scope subtree
-// filter: (objectclass=*)
-// requesting: ALL
+# LDAPv3
+# base <dc=pettra,dc=com> with scope subtree
+# filter: (objectclass=*)
+# requesting: ALL
 
 
-// pettra.com
+# pettra.com
 dn: dc=pettra,dc=com
 objectClass: top
 objectClass: dcObject
@@ -59,7 +59,7 @@ objectClass: organization
 o: Example Inc.
 dc: pettra
 
-// admin, pettra.com
+# admin, pettra.com
 dn: cn=admin,dc=pettra,dc=com
 objectClass: simpleSecurityObject
 objectClass: organizationalRole
@@ -67,7 +67,7 @@ cn: admin
 description: LDAP administrator
 userPassword:: e1NTSEF9Ui96U0ppdzJKdHhud0N6RGZxb0pacnREMHBQR3Q5M3k=
 
-// search result
+# search result
 search: 2
 result: 0 Success
 
@@ -76,7 +76,8 @@ numEntries: 2
 
 ```
 
-# phpldapadmin 설치
+3. phpLDAPadmin 설치
+```
 # 참고사이트: https://github.com/osixia/docker-phpLDAPadmin
 # docker run --detach \
 #    --hostname phpldapadmin.pettra.com \
@@ -87,21 +88,25 @@ numEntries: 2
 #    --env PHPLDAPADMIN_LDAP_HOSTS=IPAddress \ # internet domain을 기입. 정식 도메인이 없는 경우 반드시 IP를 입력(192.168.10.90)
 #                                              # hosts 파일에 가라로 등록한 domain address을 기입하는 경우 정상동작하지 않음
 #    osixia/phpldapadmin:0.7.2
-
-# phpldapadmin 설치
+```
+- docker 명령어
+```
 docker run --detach --hostname phpldapadmin.pettra.com --publish 6443:443 --name phpldapadmin --restart always --volume /etc/localtime:/etc/localtime:ro --env PHPLDAPADMIN_LDAP_HOSTS=192.168.10.90 osixia/phpldapadmin:0.7.2
-# User 추가를 위한 custom user template를 docker에 upload한다.
+```
+- User 추가를 위한 custom user template를 docker에 upload한다.
+```
 docker cp ./custom_posixAccount.xml phpldapadmin:./var/www/phpldapadmin/templates/creation/
+```
 
-# 브라우져로 phpldapadmin.pettra.com:6443 (or IPAdress:6443)으로 접속
+- phpLDAPadmin 검증
+: 브라우져로 phpldapadmin.pettra.com:6443 (or IPAdress:6443)으로 접속
 
-# 사용자 추가 방법은 아래 링크 참고
-# http://blog.hkwon.me/use-openldap-part1/
+- 사용자 추가 방법은 아래 링크 참고
+http://blog.hkwon.me/use-openldap-part1/
 
-# 사용자 추가 후 추가한 단순 검색 결과
-#ldapsearch -x -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=admin,dc=pettra,dc=com" -w Pettra@1023
-# 아래와 같은 결과가 출력되어야 한다.
-# 여기부터 <============================================================================
+- 사용자 추가 후, 단순 검색 결과
+```
+$ ldapsearch -x -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=admin,dc=pettra,dc=com" -w Pettra@1023
 # extended LDIF
 #
 # LDAPv3
@@ -176,13 +181,11 @@ docker cp ./custom_posixAccount.xml phpldapadmin:./var/www/phpldapadmin/template
 
 # numResponses: 8
 # numEntries: 7
-# 여기까지 ============================================================================>
+```
 
-# 사용자 추가 후 추가한 사용자 검증 방법
-ldapsearch -x -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=Roy Kang,ou=users,dc=pettra,dc=com" -w kstkmr2010
-
-# 아래와 같은 결과가 출력되어야 한다.
-# 여기부터 <============================================================================
+- 사용자 추가 후 추가한 사용자 검증 방법
+```
+$ ldapsearch -x -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=Roy Kang,ou=users,dc=pettra,dc=com" -w kstkmr2010
 # extended LDIF
 #
 # LDAPv3
@@ -192,13 +195,14 @@ ldapsearch -x -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=Roy Kang,ou=u
 #
 
 # search result
-#search: 2
-#result: 32 No such object
+search: 2
+result: 32 No such object
 
-# numResponses: 1
-# 여기까지 ============================================================================>
+ numResponses: 1
+```
 
-# GitLab 설치
+4 GitLab 설치
+```
 # docker run --detach \
 #    --hostname gitlab.pettra.com \
 #    --publish 443:443 --publish 80:80 --publish 22:22 \
@@ -209,18 +213,31 @@ ldapsearch -x -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=Roy Kang,ou=u
 #    --volume /data/srv/gitlab/data:/var/opt/gitlab # 여기에 source data에 저장된다.
 #    --volume /etc/localtime:/etc/localtime:ro \
 #    gitlab/gitlab-ce:latest
+```
 
+- docker 명령어
+```
 docker run --detach --hostname gitlab.pettra.com --publish 443:443 --publish 80:80 --publish 22:22 --name gitlab --restart always --volume /data/srv/gitlab/config:/etc/gitlab --volume /data/srv/gitlab/logs:/var/log/gitlab --volume /data/srv/gitlab/data:/var/opt/gitlab --volume /etc/localtime:/etc/localtime:ro gitlab/gitlab-ce:latest
+```
 
-# GitLab의 모든 정보는 server의 /data/srv/gitlab 폴더에 모두 저장되어 있음.
-# 따라서, 이를 복사하여 백업해 놨다가 같은 경로에 압축을 해제하면 이전과 동일한 상태로 만들 수 있음.
-# $ cd /data/srv/
-# $ sudo tar cfvz gitlab.tgz gitlab
-# 적당한 장소에 백업.
-# $ cd /data/srv/
-# $ tar xfvz gitlab.tgz # 현재 폴더에 압축을 해제함.
-# PathFinder Pro 소스 받기
-# == SSH 사용
-# $ repo init -u ssh://git@192.168.10.90/pettra/android/platform/manifest.git -b master-pf
-# == HTTP 사용
-# $ repo init -u http://192.168.10.90/pettra/android/platform/manifest.git -b master-pf
+- 데이터 백업
+GitLab의 모든 정보는 server의 /data/srv/gitlab 폴더에 모두 저장되어 있음.
+따라서, 이를 복사하여 백업해 놨다가 같은 경로에 압축을 해제하면 이전과 동일한 상태로 만들 수 있음.
+```
+$ cd /data/srv/
+$ sudo tar cfvz gitlab.tgz gitlab
+```
+적당한 장소에 백업.
+```
+$ cd /data/srv/
+$ tar xfvz gitlab.tgz # 현재 폴더에 압축을 해제함.
+```
+PathFinder Pro 소스 받기
+SSH 사용
+```
+$ repo init -u ssh://git@192.168.10.90/pettra/android/platform/manifest.git -b master-pf
+```
+HTTP 사용
+```
+$ repo init -u http://192.168.10.90/pettra/android/platform/manifest.git -b master-pf
+```
