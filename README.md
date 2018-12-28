@@ -20,7 +20,7 @@ cat /etc/localtime
 ```
 
 2. openLDAP 설치
-
+```
 # openLDAP 설치
 # 참고 사이트: https://github.com/osixia/docker-openldap
 # docker run --detach \
@@ -34,12 +34,13 @@ cat /etc/localtime
 #    --env LDAP_DOMAIN="pettra.com" \
 #    --env LDAP_ADMIN_PASSWORD="Pettra@1023"
 #    osixia/openldap:1.2.2
+```
 
-docker 명령어
+- docker 명령어
 ```
 docker run --detach --hostname ldap.pettra.com --publish 389:389 --publish 689:689 --name openLDAP --restart always --volume /data/srv/slapd/config:/etc/ldap/slapd.d --volume /data/srv/slapd/config:/etc/ldap/slapd.d --volume /etc/localtime:/etc/localtime:ro --env  LDAP_DOMAIN="pettra.com" --env LDAP_ADMIN_PASSWORD="Pettra@1023" osixia/openldap:1.2.2
 ```
-# openLDAP 검증
+- openLDAP 검증
 ```
 $ ldapsearch -x -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=admin,dc=pettra,dc=com" -w Pettra@1023
 ```
