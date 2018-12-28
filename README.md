@@ -19,7 +19,7 @@ sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
 cat /etc/localtime
 ```
 
-## 2. openLDAP 설치
+## 2. openLDAP 설치 (docker)
 ```
 # openLDAP 설치
 # 참고 사이트: https://github.com/osixia/docker-openldap
@@ -76,7 +76,7 @@ numEntries: 2
 
 ```
 
-## 3. phpLDAPadmin 설치
+## 3. phpLDAPadmin 설치 (docker)
 ```
 # 참고사이트: https://github.com/osixia/docker-phpLDAPadmin
 # docker run --detach \
@@ -203,7 +203,7 @@ result: 32 No such object
  numResponses: 1
 ```
 
-## 4 GitLab 설치
+## 4. GitLab 설치 (docker)
 ```
 # docker run --detach \
 #    --hostname gitlab.pettra.com \
@@ -234,6 +234,7 @@ $ sudo tar cfvz gitlab.tgz gitlab
 $ cd /data/srv/
 $ tar xfvz gitlab.tgz # 현재 폴더에 압축을 해제합니다.
 ```
+
 ## 5 Jenkins 설치
 여기서는 소스 빌드를 docker에서 진행합니다. Jenkins를 docker로 운영하는 경우, docker 안에 다른 docker(docker for jenkins auto build)를 둬야 하는 복잡성 때문에 Jenkins는 docker가 아닌 서버에 직접 설치하는 방법을 사용합니다.
 
@@ -284,3 +285,23 @@ $ sudo apt-get install jenkins
 
 * Jenkins Ready
     ![](/assets/jenkins_setup_5.png)  
+
+## 5. build-pf-pro 설치
+ubuntu 16.04 container 생성
+```
+$ docker run --name build-pf-pro -v /data/work/src:/work -it ubuntu:16.04 /bin/bash
+root@6cebbd07fb28:/# apt-get update && apt-get upgrade -y
+root@6cebbd07fb28:/# apt-get install -y sudo vim
+root@6cebbd07fb28:/# adduser jenkins
+root@6cebbd07fb28:/# visudo -f /etc/sudoers
+# User privilege specification
+root    ALL=(ALL:ALL) ALL
+jenkins ALL=(ALL:ALL) ALL  # 추가
+root@6cebbd07fb28:/# su - jenkins
+$ sudo apt-get install -y git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev libgl1-mesa-dev libxml2-utils xsltproc unzip
+$ sudo apt-get install -y git repo xz-utils
+$ sudo apt-get install -y bc u-boot-tools realpath ccache
+$ sudo apt-get install -y software-properties-common
+$ sudo add-apt-repository ppa:openjdk-r/ppa  
+$ sudo apt-get update && sudo apt-get install -y openjdk-7-jdk 
+```
