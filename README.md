@@ -106,7 +106,7 @@ docker cp ./custom_posixAccount.xml phpldapadmin:./var/www/phpldapadmin/template
 
 * **사용자 추가 후, 단순 검색 결과**
 ```
-$ ldapsearch -x -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=admin,dc=pettra,dc=com" -w Pettra@1023
+$ ldapsearch -x -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=admin,dc=pettra,dc=com" -w P@ssword
 # extended LDIF
 #
 # LDAPv3
@@ -184,8 +184,10 @@ $ ldapsearch -x -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=admin,dc=pe
 ```
 
 * **사용자 추가 후 추가한 사용자 검증 방법**
+: 패스워드(-w)는 LDAP에서 입력한 Roy Kang 계정의 password를 입력합니다.  
+여기서는 예를 들어, P@ssword를 사용하였습니다.
 ```
-$ ldapsearch -x -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=Roy Kang,ou=users,dc=pettra,dc=com" -w kstkmr2010
+$ ldapsearch -x -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=Roy Kang,ou=users,dc=pettra,dc=com" -w P@ssword
 # extended LDIF
 #
 # LDAPv3
@@ -220,9 +222,9 @@ result: 32 No such object
 docker run --detach --hostname gitlab.pettra.com --publish 443:443 --publish 80:80 --publish 22:22 --name gitlab --restart always --volume /data/srv/gitlab/config:/etc/gitlab --volume /data/srv/gitlab/logs:/var/log/gitlab --volume /data/srv/gitlab/data:/var/opt/gitlab --volume /etc/localtime:/etc/localtime:ro gitlab/gitlab-ce:latest
 ```
 
-* **데이터 백업**
-GitLab의 모든 정보는 server의 /data/srv/gitlab 폴더에 모두 저장되어 있음.
-따라서, 이를 복사하여 백업해 놨다가 같은 경로에 압축을 해제하면 이전과 동일한 상태로 만들 수 있음.
+* **데이터 백업**  
+GitLab의 모든 정보는 server의 /data/srv/gitlab 폴더에 모두 저장되어 있습니다.
+따라서, 이를 복사하여 백업해 놨다가 같은 경로에 압축을 해제하면 이전과 동일한 상태로 만들 수 있습니다.
 ```
 $ cd /data/srv/
 $ sudo tar cfvz gitlab.tgz gitlab
@@ -230,14 +232,50 @@ $ sudo tar cfvz gitlab.tgz gitlab
 적당한 장소에 백업.
 ```
 $ cd /data/srv/
-$ tar xfvz gitlab.tgz # 현재 폴더에 압축을 해제함.
+$ tar xfvz gitlab.tgz # 현재 폴더에 압축을 해제합니다.
 ```
-PathFinder Pro 소스 받기
-SSH 사용
+## 5 Jenkins 설치
+여기서는 소스 빌드를 docker에서 진행합니다. Jenkins를 docker로 운영하는 경우, docker 안에 다른 docker를 둬야 하는 복잡성 때문에 Jenkins는 docker가 아닌 서버에 직접 설치하는 방법을 사용합니다.
+
+* **openJDK 1.8 설치**
 ```
-$ repo init -u ssh://git@192.168.10.90/pettra/android/platform/manifest.git -b master-pf
+sudo apt-get install -y openjdk-8-jdk
 ```
-HTTP 사용
+
+* **Jenkins 설치**
 ```
-$ repo init -u http://192.168.10.90/pettra/android/platform/manifest.git -b master-pf
+$ wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
+$ sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+$ sudo apt-get update
+$ sudo add-apt-repository universe
+$ sudo apt-get install jenkins
 ```
+* **Jenkins 설정**  
+브라우져로 http://192.168.10.90:8080 (or http://localhost:8080) 
+
+* Jenkins unlock  
+![](/assets/jenkins_unlock.png)
+  
+/var/lib/jenkins/secrets/initialAdminPassword 경로의 unlock code를 읽어서 입력합니다.
+```
+$ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+b08ef74bbb1a4673bc1a59dea2de****
+```
+
+* Jenkins plugin install  
+Install suggested plugins 선택  
+![](/assets/jenkins_setup_1.png)  
+
+![](/assets/jenkins_setup_2.png)  
+
+* Admin User 생성  
+![](/assets/jenkins_setup_3.png)  
+
+
+계정명 admin
+---------
+암호 P@ssword
+암호확인 P@ssword
+이름 admin
+이메일주소 roykang@dogtra.com
+
