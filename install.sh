@@ -8,6 +8,7 @@ sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
 cat /etc/localtime
 
 # openLDAP 설치
+# 참고 사이트: https://github.com/osixia/docker-openldap
 # docker run --detach \
 #    --hostname ldap.pettra.com \
 #    --publish 389:389 --publish 689:689 \
