@@ -272,10 +272,10 @@ b08ef74bbb1a4673bc1a59dea2de****
 * Admin User 생성  
     ![](/assets/jenkins_setup_3.png)  
 
-계정명 | admin
-----|------
-암호 | P@ssword
-암호확인 | P@ssword
-이름 | admin
-이메일주소 | roykang@dogtra.com
-
+    계정명 | admin
+    ----|------
+    암호 | P@ssword
+    암호확인 | P@ssword
+    이름 | admin
+    이메일주소 | roykang@dogtra.com
+`
