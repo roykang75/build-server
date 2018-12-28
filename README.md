@@ -32,17 +32,17 @@ cat /etc/localtime
 #    --volume /data/srv/slapd/config:/etc/ldap/slapd.d \
 #    --volume /etc/localtime:/etc/localtime:ro \
 #    --env LDAP_DOMAIN="pettra.com" \
-#    --env LDAP_ADMIN_PASSWORD="Pettra@1023"
+#    --env LDAP_ADMIN_PASSWORD="P@ssword"
 #    osixia/openldap:1.2.2
 ```
 
 * **docker 명령어**
 ```
-docker run --detach --hostname ldap.pettra.com --publish 389:389 --publish 689:689 --name openLDAP --restart always --volume /data/srv/slapd/config:/etc/ldap/slapd.d --volume /data/srv/slapd/config:/etc/ldap/slapd.d --volume /etc/localtime:/etc/localtime:ro --env  LDAP_DOMAIN="pettra.com" --env LDAP_ADMIN_PASSWORD="Pettra@1023" osixia/openldap:1.2.2
+docker run --detach --hostname ldap.pettra.com --publish 389:389 --publish 689:689 --name openLDAP --restart always --volume /data/srv/slapd/config:/etc/ldap/slapd.d --volume /data/srv/slapd/config:/etc/ldap/slapd.d --volume /etc/localtime:/etc/localtime:ro --env  LDAP_DOMAIN="pettra.com" --env LDAP_ADMIN_PASSWORD="P@ssword" osixia/openldap:1.2.2
 ```
 * **openLDAP 검증**
 ```
-$ ldapsearch -x -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=admin,dc=pettra,dc=com" -w Pettra@1023
+$ ldapsearch -x -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=admin,dc=pettra,dc=com" -w P@ssword
 # extended LDIF
 
 # LDAPv3
@@ -183,7 +183,7 @@ $ ldapsearch -x -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=admin,dc=pe
 # numEntries: 7
 ```
 
-* **사용자 추가 후 추가한 사용자 검증 방법**
+* **사용자 추가 후 추가한 사용자 검증 방법**  
 : 패스워드(-w)는 LDAP에서 입력한 Roy Kang 계정의 password를 입력합니다.  
 여기서는 예를 들어, P@ssword를 사용하였습니다.
 ```
@@ -235,7 +235,7 @@ $ cd /data/srv/
 $ tar xfvz gitlab.tgz # 현재 폴더에 압축을 해제합니다.
 ```
 ## 5 Jenkins 설치
-여기서는 소스 빌드를 docker에서 진행합니다. Jenkins를 docker로 운영하는 경우, docker 안에 다른 docker를 둬야 하는 복잡성 때문에 Jenkins는 docker가 아닌 서버에 직접 설치하는 방법을 사용합니다.
+여기서는 소스 빌드를 docker에서 진행합니다. Jenkins를 docker로 운영하는 경우, docker 안에 다른 docker(docker for jenkins auto build)를 둬야 하는 복잡성 때문에 Jenkins는 docker가 아닌 서버에 직접 설치하는 방법을 사용합니다.
 
 * **openJDK 1.8 설치**
 ```
@@ -254,28 +254,28 @@ $ sudo apt-get install jenkins
 브라우져로 http://192.168.10.90:8080 (or http://localhost:8080) 
 
 * Jenkins unlock  
+: /var/lib/jenkins/secrets/initialAdminPassword 경로의 unlock code를 읽어서 입력합니다.
 ![](/assets/jenkins_unlock.png)
   
-/var/lib/jenkins/secrets/initialAdminPassword 경로의 unlock code를 읽어서 입력합니다.
+
 ```
 $ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 b08ef74bbb1a4673bc1a59dea2de****
 ```
 
-* Jenkins plugin install  
-Install suggested plugins 선택  
-![](/assets/jenkins_setup_1.png)  
+* Jenkins plugin install
+    Install suggested plugins 선택  
+    ![](/assets/jenkins_setup_1.png)  
 
-![](/assets/jenkins_setup_2.png)  
+    ![](/assets/jenkins_setup_2.png)  
 
 * Admin User 생성  
-![](/assets/jenkins_setup_3.png)  
+    ![](/assets/jenkins_setup_3.png)  
 
-
-계정명 admin
----------
-암호 P@ssword
-암호확인 P@ssword
-이름 admin
-이메일주소 roykang@dogtra.com
+계정명 | admin
+----|------
+암호 | P@ssword
+암호확인 | P@ssword
+이름 | admin
+이메일주소 | roykang@dogtra.com
 
