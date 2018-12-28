@@ -258,10 +258,10 @@ $ sudo apt-get install jenkins
 ![](/assets/jenkins_unlock.png)
   
 
-```
-$ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
-b08ef74bbb1a4673bc1a59dea2de****
-```
+    ```
+    $ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+    b08ef74bbb1a4673bc1a59dea2de****
+    ```
 
 * Jenkins plugin install
     Install suggested plugins 선택  
