@@ -61,6 +61,7 @@ ldapsearch -x -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=admin,dc=pett
 # 여기까지 ============================================================================>
 
 # phpldapadmin 설치
+# 참고사이트: https://github.com/osixia/docker-phpLDAPadmin
 # docker run --detach \
 #    --hostname phpldapadmin.pettra.com \
 #    --publish 6443:443 \
