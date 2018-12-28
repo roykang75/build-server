@@ -236,7 +236,7 @@ $ tar xfvz gitlab.tgz # 현재 폴더에 압축을 해제합니다.
 ```
 
 ## 5 Jenkins 설치
-여기서는 소스 빌드를 docker에서 진행합니다. Jenkins를 docker로 운영하는 경우, docker 안에 다른 docker(docker for jenkins auto build)를 둬야 하는 복잡성 때문에 Jenkins는 docker가 아닌 서버에 직접 설치하는 방법을 사용합니다.
+여기서는 소스 빌드를 docker에서 진행합니다. Jenkins를 docker로 운영하는 경우, docker 안에 다른 docker(docker for jenkins auto build)를 둬야 하는 복잡성 때문에 Jenkins는 docker가 아닌 서버에 직접 설치하는 방법을 사용합니다. 또한, Jenkins는 OpenJDK 1.8을 사용하고 PathFinder Pro는 OpenJDK 1.7을 사용(Android 5.1)하여 같은 공간에서 빌드가 안됩니다.  
 
 * **openJDK 1.8 설치**
 ```
