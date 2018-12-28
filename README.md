@@ -277,8 +277,10 @@ $ sudo apt-get install jenkins
     암호 | P@ssword
     암호확인 | P@ssword
     이름 | admin
-    이메일주소 | roykang@dogtra.com
+    이메일주소 | roykang75@gmail.com
 `
 * Jenkins URL 설정
     ![](/assets/jenkins_setup_4.png)  
 
+* Jenkins Ready
+    ![](/assets/jenkins_setup_5.png)  
