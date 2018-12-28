@@ -279,3 +279,6 @@ $ sudo apt-get install jenkins
     이름 | admin
     이메일주소 | roykang@dogtra.com
 `
+* Jenkins URL 설정
+    ![](/assets/jenkins_setup_4.png)  
+
