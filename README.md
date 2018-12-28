@@ -287,7 +287,7 @@ $ sudo apt-get install jenkins
     ![](/assets/jenkins_setup_5.png)  
 
 ## 5. build-pf-pro 설치
-ubuntu 16.04 container 생성
+* **ubuntu 16.04 container 생성**
 ```
 $ docker run --name build-pf-pro -v /data/work/src:/work -it ubuntu:16.04 /bin/bash
 root@6cebbd07fb28:/# apt-get update && apt-get upgrade -y
