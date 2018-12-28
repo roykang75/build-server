@@ -36,7 +36,7 @@ cat /etc/localtime
 #    osixia/openldap:1.2.2
 ```
 
-- docker 명령어
+* **docker 명령어**
 ```
 docker run --detach --hostname ldap.pettra.com --publish 389:389 --publish 689:689 --name openLDAP --restart always --volume /data/srv/slapd/config:/etc/ldap/slapd.d --volume /data/srv/slapd/config:/etc/ldap/slapd.d --volume /etc/localtime:/etc/localtime:ro --env  LDAP_DOMAIN="pettra.com" --env LDAP_ADMIN_PASSWORD="Pettra@1023" osixia/openldap:1.2.2
 ```
@@ -76,7 +76,7 @@ numEntries: 2
 
 ```
 
-**3. phpLDAPadmin 설치**
+## 3. phpLDAPadmin 설치
 ```
 # 참고사이트: https://github.com/osixia/docker-phpLDAPadmin
 # docker run --detach \
@@ -201,7 +201,7 @@ result: 32 No such object
  numResponses: 1
 ```
 
-**4 GitLab 설치**
+## 4 GitLab 설치
 ```
 # docker run --detach \
 #    --hostname gitlab.pettra.com \
