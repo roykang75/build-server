@@ -68,7 +68,7 @@ ldapsearch -x -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=admin,dc=pett
 #    --name phpldapadmin \
 #    --restart always \
 #    --volume /etc/localtime:/etc/localtime:ro \
-#    --env PHPLDAPADMIN_LDAP_HOSTS=IPAddress \ # internet domain을 기입. 정식 도메인이 없는 경우 반듯이 IP를 입력(192.168.10.81)
+#    --env PHPLDAPADMIN_LDAP_HOSTS=IPAddress \ # internet domain을 기입. 정식 도메인이 없는 경우 반드시 IP를 입력(192.168.10.81)
 #                                              # hosts 파일에 가라로 등록한 domain address을 기입하는 경우 정상동작하지 않음
 #    osixia/phpldapadmin:0.7.2
 
