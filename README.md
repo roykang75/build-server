@@ -7,6 +7,18 @@ build-server inistall script
 * OS: Ubuntu 16.04 LTS
 * IP: 192.168.10.90
 
+* **시스템 구성도**
+![](/assets/build_system.png)  
+
+
+Contents  
+1. openLDAP 설치 (docker)  
+2. phpLDAPadmin 설치 (docker)  
+3. GitLab 설치 (docker)  
+4. Jenkins 설치  
+5. build-pf-pro 설치 for Jenkins (docker)  
+6. Netdata 설치 (서버 모니터링 툴)  
+
 ## 1. 서버 업데이트
 ```
 #! /bin/bash
@@ -235,7 +247,7 @@ $ cd /data/srv/
 $ tar xfvz gitlab.tgz # 현재 폴더에 압축을 해제합니다.
 ```
 
-## 5 Jenkins 설치
+## 5. Jenkins 설치
 여기서는 소스 빌드를 docker에서 진행합니다. Jenkins를 docker로 운영하는 경우, docker 안에 다른 docker(docker for jenkins auto build)를 둬야 하는 복잡성 때문에 Jenkins는 docker가 아닌 서버에 직접 설치하는 방법을 사용합니다. 또한, Jenkins는 OpenJDK 1.8을 사용하고 PathFinder Pro는 OpenJDK 1.7을 사용(Android 5.1)하여 같은 공간에서 빌드가 안됩니다.  
 
 * **openJDK 1.8 설치**
@@ -305,3 +317,9 @@ $ sudo apt-get install jenkins
     $ sudo add-apt-repository ppa:openjdk-r/ppa  
     $ sudo apt-get update && sudo apt-get install -y openjdk-7-jdk 
     ```
+## 6. Netdata 설치
+* **Installation Guide**  
+    <https://docs.netdata.cloud/packaging/installer/  >
+
+* **Installation Guide with Docker**  
+    <https://docs.netdata.cloud/packaging/docker/>
