@@ -7,6 +7,8 @@ sudo apt-get install -y ldap-utils # ldapsearch utilities
 sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
 cat /etc/localtime
 
+# 이 스크립트는 서버 IP가 192.168.10.90로 가정하고 작성되었다.
+
 # openLDAP 설치
 # 참고 사이트: https://github.com/osixia/docker-openldap
 # docker run --detach \
@@ -68,7 +70,7 @@ ldapsearch -x -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=admin,dc=pett
 #    --name phpldapadmin \
 #    --restart always \
 #    --volume /etc/localtime:/etc/localtime:ro \
-#    --env PHPLDAPADMIN_LDAP_HOSTS=IPAddress \ # internet domain을 기입. 정식 도메인이 없는 경우 반드시 IP를 입력(192.168.10.81)
+#    --env PHPLDAPADMIN_LDAP_HOSTS=IPAddress \ # internet domain을 기입. 정식 도메인이 없는 경우 반드시 IP를 입력(192.168.10.90)
 #                                              # hosts 파일에 가라로 등록한 domain address을 기입하는 경우 정상동작하지 않음
 #    osixia/phpldapadmin:0.7.2
 
