@@ -98,11 +98,11 @@ docker run --detach --hostname phpldapadmin.pettra.com --publish 6443:443 --name
 docker cp ./custom_posixAccount.xml phpldapadmin:./var/www/phpldapadmin/templates/creation/
 ```
 
-* **phpLDAPadmin 검증**
-: 브라우져로 phpldapadmin.pettra.com:6443 (or IPAdress:6443)으로 접속
+* **phpLDAPadmin 검증**  
+: 브라우져로 [phpldapadmin.pettra.com:6443](http://phpldapadmin.pettra.com:6443) (or IPAdress:6443)으로 접속
 
-* **사용자 추가 방법은 아래 링크 참고**
-http://blog.hkwon.me/use-openldap-part1/
+* **사용자 추가 방법은 아래 링크 참고**  
+<http://blog.hkwon.me/use-openldap-part1/>
 
 * **사용자 추가 후, 단순 검색 결과**
 ```
