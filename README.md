@@ -7,7 +7,7 @@ build-server inistall script
 * OS: Ubuntu 16.04 LTS
 * IP: 192.168.10.90
 
-1. 서버 업데이트
+**1. 서버 업데이트**
 ```
 #! /bin/bash
 
@@ -19,7 +19,7 @@ sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
 cat /etc/localtime
 ```
 
-2. openLDAP 설치
+**2. openLDAP 설치**
 ```
 # openLDAP 설치
 # 참고 사이트: https://github.com/osixia/docker-openldap
@@ -76,7 +76,7 @@ numEntries: 2
 
 ```
 
-3. phpLDAPadmin 설치
+**3. phpLDAPadmin 설치**
 ```
 # 참고사이트: https://github.com/osixia/docker-phpLDAPadmin
 # docker run --detach \
@@ -201,7 +201,7 @@ result: 32 No such object
  numResponses: 1
 ```
 
-4 GitLab 설치
+**4 GitLab 설치**
 ```
 # docker run --detach \
 #    --hostname gitlab.pettra.com \
