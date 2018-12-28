@@ -89,22 +89,22 @@ numEntries: 2
 #                                              # hosts 파일에 가라로 등록한 domain address을 기입하는 경우 정상동작하지 않음
 #    osixia/phpldapadmin:0.7.2
 ```
-- docker 명령어
+* **docker 명령어**
 ```
 docker run --detach --hostname phpldapadmin.pettra.com --publish 6443:443 --name phpldapadmin --restart always --volume /etc/localtime:/etc/localtime:ro --env PHPLDAPADMIN_LDAP_HOSTS=192.168.10.90 osixia/phpldapadmin:0.7.2
 ```
-- User 추가를 위한 custom user template를 docker에 upload한다.
+* **User 추가를 위한 custom user template를 docker에 upload한다.**
 ```
 docker cp ./custom_posixAccount.xml phpldapadmin:./var/www/phpldapadmin/templates/creation/
 ```
 
-- phpLDAPadmin 검증
+* **phpLDAPadmin 검증**
 : 브라우져로 phpldapadmin.pettra.com:6443 (or IPAdress:6443)으로 접속
 
-- 사용자 추가 방법은 아래 링크 참고
+* **사용자 추가 방법은 아래 링크 참고**
 http://blog.hkwon.me/use-openldap-part1/
 
-- 사용자 추가 후, 단순 검색 결과
+* **사용자 추가 후, 단순 검색 결과**
 ```
 $ ldapsearch -x -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=admin,dc=pettra,dc=com" -w Pettra@1023
 # extended LDIF
@@ -183,7 +183,7 @@ $ ldapsearch -x -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=admin,dc=pe
 # numEntries: 7
 ```
 
-- 사용자 추가 후 추가한 사용자 검증 방법
+* **사용자 추가 후 추가한 사용자 검증 방법**
 ```
 $ ldapsearch -x -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=Roy Kang,ou=users,dc=pettra,dc=com" -w kstkmr2010
 # extended LDIF
@@ -215,12 +215,12 @@ result: 32 No such object
 #    gitlab/gitlab-ce:latest
 ```
 
-- docker 명령어
+* **docker 명령어**
 ```
 docker run --detach --hostname gitlab.pettra.com --publish 443:443 --publish 80:80 --publish 22:22 --name gitlab --restart always --volume /data/srv/gitlab/config:/etc/gitlab --volume /data/srv/gitlab/logs:/var/log/gitlab --volume /data/srv/gitlab/data:/var/opt/gitlab --volume /etc/localtime:/etc/localtime:ro gitlab/gitlab-ce:latest
 ```
 
-- 데이터 백업
+* **데이터 백업**
 GitLab의 모든 정보는 server의 /data/srv/gitlab 폴더에 모두 저장되어 있음.
 따라서, 이를 복사하여 백업해 놨다가 같은 경로에 압축을 해제하면 이전과 동일한 상태로 만들 수 있음.
 ```
