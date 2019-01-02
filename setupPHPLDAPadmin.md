@@ -215,5 +215,5 @@ result: 32 No such object
  numResponses: 1
 ```
 
-* **phpLDAPadmin은 아래 블로그 글을 참고하였습니다.**  
+* **phpLDAPadmin의 설명 내용은 "권혁"님의 블로그 글을 참고하였습니다.**  
 <http://blog.hkwon.me/use-openldap-part1/>  
