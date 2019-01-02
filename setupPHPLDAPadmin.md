@@ -36,11 +36,18 @@ login DN: cn=admin, dc=pettra, dc=com (openLDAP docker에서 인자로 사용한
 Password: openLDAP의 admin password  
 ![](/assets/phpLDAPadmin_3.png)  
 
+(4) admin으로 login을 하면 아래와 같은 화면을 볼 수 있습니다.  
+![](/assets/phpLDAPadmin_4.png)  
+
+
 
 * **사용자 추가 방법은 아래 링크 참고**  
-<http://blog.hkwon.me/use-openldap-part1/>
+<http://blog.hkwon.me/use-openldap-part1/>  
+스크린샷으로 따로 업데이트 예정
 
-* **사용자 추가 후, 단순 검색 결과**
+* **사용자 추가 후, 단순 검색 결과**  
+ldapsearch 사용방법은 _openLDAP 설치_를 참조하세요.
+
 ```
 $ ldapsearch -x -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=admin,dc=pettra,dc=com" -w P@ssword
 # extended LDIF
