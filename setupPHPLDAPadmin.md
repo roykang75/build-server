@@ -194,8 +194,9 @@ $ ldapsearch -x -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=admin,dc=pe
 ```
 
 * **사용자 추가 후 추가한 사용자 검증 방법**  
-: 패스워드(-w)는 LDAP에서 입력한 Roy Kang 계정의 password를 입력합니다.  
-여기서는 예를 들어, P@ssword를 사용하였습니다.
+
+패스워드(-W)는 LDAP에서 입력한 Roy Kang 계정의 password를 입력합니다.  
+
 ```
 $ ldapsearch -x -W -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=Roy Kang,ou=users,dc=pettra,dc=com"
 Enter LDAP Password: "cn=Roy Kang"의 password 입력
