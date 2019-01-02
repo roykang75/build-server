@@ -26,6 +26,8 @@ docker cp ./custom_posixAccount.xml phpldapadmin:./var/www/phpldapadmin/template
 * **phpLDAPadmin 검증**  
 : 브라우져로 [phpldapadmin.pettra.com:6443](http://phpldapadmin.pettra.com:6443) (or IPAdress:6443)으로 접속
 
+![](/assets/phpLDAPadmin_1.png)  
+
 * **사용자 추가 방법은 아래 링크 참고**  
 <http://blog.hkwon.me/use-openldap-part1/>
 
