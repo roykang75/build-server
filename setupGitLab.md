@@ -65,12 +65,23 @@ EOS
 .....
 ```
 
+환경 파일을 재로딩합니다.  
+```
+# gitlab-ctl reconfigure  
+```
+
+GitLab을 재시작합니다.  
+```
+# gitlab-ctl restart  
+```
+
 * **GitLab 환경설정 파일**
 ```
 sudo vim /etc/gitlab/gitlab.rb
 ```
 
 * **GitLab 명령어**  
+
 **환경 파일 재로딩**  
 ```
 $ sudo gitlab-ctl reconfigure  
