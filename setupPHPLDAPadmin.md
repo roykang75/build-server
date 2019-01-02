@@ -106,6 +106,11 @@ Add Attribute에서 memberUid를 선택합니다.
 계정(uid)을 입력한 후, Update Object 를 클릭합니다. (반드시 uid를 입력해야 합니다.)    
 ![](/assets/phpLDAPadmin_grp_user_3.png)  
 
+Commit버튼을 클릭합니다.  
+![](/assets/phpLDAPadmin_grp_user_4.png)  
+
+아래와 같이 그룹에 계정이 추가된 것을 확인할 수 있습니다.  
+![](/assets/phpLDAPadmin_grp_user_5.png)  
 
 * **사용자 추가 방법은 아래 링크 참고**  
 <http://blog.hkwon.me/use-openldap-part1/>  
