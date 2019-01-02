@@ -112,10 +112,6 @@ Commit버튼을 클릭합니다.
 아래와 같이 그룹에 계정이 추가된 것을 확인할 수 있습니다.  
 ![](/assets/phpLDAPadmin_grp_user_5.png)  
 
-* **사용자 추가 방법은 아래 링크 참고**  
-<http://blog.hkwon.me/use-openldap-part1/>  
-스크린샷으로 따로 업데이트 예정
-
 * **사용자 추가 후, 단순 검색 결과**  
 ldapsearch 사용방법은 _openLDAP 설치_를 참조하세요.
 
@@ -201,7 +197,8 @@ $ ldapsearch -x -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=admin,dc=pe
 : 패스워드(-w)는 LDAP에서 입력한 Roy Kang 계정의 password를 입력합니다.  
 여기서는 예를 들어, P@ssword를 사용하였습니다.
 ```
-$ ldapsearch -x -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=Roy Kang,ou=users,dc=pettra,dc=com" -w P@ssword
+$ ldapsearch -x -W -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=Roy Kang,ou=users,dc=pettra,dc=com"
+Enter LDAP Password: "cn=Roy Kang"의 password 입력
 # extended LDIF
 #
 # LDAPv3
@@ -216,3 +213,6 @@ result: 32 No such object
 
  numResponses: 1
 ```
+
+* **phpLDAPadmin은 아래 블로그 글을 참고하였습니다.**  
+<http://blog.hkwon.me/use-openldap-part1/>  
