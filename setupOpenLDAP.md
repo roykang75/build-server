@@ -22,6 +22,7 @@ docker run --detach --hostname ldap.pettra.com --publish 389:389 --publish 689:6
 ```  
 
 * **openLDAP 검증**  
+
 LDAP 검증을 위해, ldapsearch 유틸리티 사용합니다.  
 설치 명령은 다음과 같습니다.  
 ```
