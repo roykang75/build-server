@@ -30,6 +30,7 @@ $ sudo tar cfvz gitlab.tgz gitlab
 ```
 $ cd /data/srv/
 $ tar xfvz gitlab.tgz # 현재 폴더에 압축을 해제합니다.  
+```
 
 * **config.rb 설정**  
 GitLab docker에 접속합니다. GitLab의 configuration 파일을 열고, 아래 내용을 추가합니다.  
