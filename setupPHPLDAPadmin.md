@@ -49,6 +49,13 @@ Organizational Units은 도메인 바로 아래 최상위 레벨의 논리적인
 Create new entry here 를 선택하고 Generic: Organizational Units을 선택합니다.  
 ![](/assets/phpLDAPadmin_ou_1.png)  
 
+이름 입력란에 "groups" 를 입력하고 Create Object를 클릭합니다.  
+![](/assets/phpLDAPadmin_ou_2.png)  
+
+
+
+
+
 * **사용자 추가 방법은 아래 링크 참고**  
 <http://blog.hkwon.me/use-openldap-part1/>  
 스크린샷으로 따로 업데이트 예정
