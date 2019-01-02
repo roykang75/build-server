@@ -103,7 +103,7 @@ Commit버튼을 클릭합니다.
 Add Attribute에서 memberUid를 선택합니다.  
 ![](/assets/phpLDAPadmin_grp_user_2.png)  
 
-계정(uid)을 입력한 후, Update Object 를 클릭합니다. (반드시 uid를 입력해야 합니다.)    
+계정(uid)을 입력한 후, Update Object 를 클릭합니다. (주의할 것은 cn 값이 아니라 uid로 입력한 값을 입력한다.)    
 ![](/assets/phpLDAPadmin_grp_user_3.png)  
 
 Commit버튼을 클릭합니다.  
