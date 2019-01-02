@@ -97,8 +97,11 @@ Commit버튼을 클릭합니다.
 ![](/assets/phpLDAPadmin_user_5.png)  
 
 **유저를 그룹에 할당하기**  
-등록된 유저들을 그룹에 할당하기 위해서는 해당 그룹의 속성을 먼저 추가해야 한다.  
-트리에서 cn=dev을 클릭하고 Add new attribute를 클릭합니다.
+등록된 유저들을 그룹에 할당하기 위해서는 해당 그룹의 속성을 먼저 추가해야 합니다. 방금 전 추가한 "cn=Roy Kang"을 dev 그룹에 추가해 보도록 하겠습니다. 트리에서 cn=dev을 클릭하고 Add new attribute를 클릭합니다.  
+![](/assets/phpLDAPadmin_grp_user_1.png)  
+
+Add Attribute에서 memberUid를 선택합니다.  
+![](/assets/phpLDAPadmin_grp_user_2.png)  
 
 
 
