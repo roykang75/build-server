@@ -17,7 +17,7 @@ Contents
 3. [GitLab 설치 (docker)](https://github.com/roykang75/build-server/blob/master/setupGitLab.md)  
 4. [Jenkins 설치](https://github.com/roykang75/build-server/blob/master/setupJenkins.md)  
 5. [build-pf-pro 설치 for Jenkins (docker)](https://github.com/roykang75/build-server/blob/master/setupBuild-pf-pro.md)  
-6. Netdata 설치 (서버 모니터링 툴)  
+6. [Netdata 설치 (서버 모니터링 툴)](https://github.com/roykang75/build-server/blob/master/setupNetdata.md)  
 
 ## 1. 서버 업데이트
 ```
