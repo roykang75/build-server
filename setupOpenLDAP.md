@@ -22,7 +22,12 @@ docker run --detach --hostname ldap.pettra.com --publish 389:389 --publish 689:6
 ```  
 
 * **openLDAP 검증**  
-
+LDAP 검증을 위해, ldapsearch 유틸리티 사용합니다.  
+설치 명령은 다음과 같습니다.  
+```
+sudo apt install ldap-utils
+```
+간단한 옵션은 다음과 같습니다.  
 -w: admin password를 command line에서 입력 받음  
 ```
 $ ldapsearch -x -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=admin,dc=pettra,dc=com" -w P@ssword  
@@ -34,6 +39,10 @@ $ ldapsearch -x -W -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=admin,dc
 Enter LDAP Password: admin password  
 <<검색 결과 출력>>  
 ```
+
+더 자세한 정보는 아래 링크를 참고하세요.  
+http://manpages.ubuntu.com/manpages/xenial/man1/ldapsearch.1.html  
+
 
 여기서는 -w 옵션을 사용하습니다.  
 ```
