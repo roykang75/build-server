@@ -79,16 +79,18 @@ Commit버튼을 클릭합니다.
 같은 방식으로 dev 그룹도 생성한다.  
 ![](/assets/phpLDAPadmin_grp_6.png)  
 
-**User 생성**
+**User 생성**  
 왼쪽 트리메뉴에서 ou=users 엔트리를 클릭하고 Create a child entry를 클릭합니다.  
 ![](/assets/phpLDAPadmin_user_1.png)  
 
 Custom user template으로 생성한 Pettra: User Account 템플릿을 클릭합니다.  
 ![](/assets/phpLDAPadmin_user_2.png)  
 
-Account 정보를 입력한 후, Create Object를 클릭합니다.  
+Account 정보를 입력한 후, Create Object를 클릭합니다. GID Numebr에서 dev 그룹을 선택합니다.  
 ![](/assets/phpLDAPadmin_user_3.png)  
 
+Commit버튼을 클릭합니다.  
+![](/assets/phpLDAPadmin_user_4.png)  
 
 * **사용자 추가 방법은 아래 링크 참고**  
 <http://blog.hkwon.me/use-openldap-part1/>  
