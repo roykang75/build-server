@@ -61,7 +61,7 @@ Commit버튼을 클릭합니다.
 똑같은 방법으로 "users" OU를 생성한다.  
 
 **Group 생성**
-그룹은 관리자 그룹과 개발자 그룹 2개 그룹으로 나누어 설정합니다. 왼쪽 트리에서 ou=groups 를 선택합니다. "Create a child entry"를 클릭합니다.  
+그룹은 관리자 그룹과 개발자 그룹 2개 그룹으로 나누어 설정합니다. 왼쪽 트리에서 ou=groups 를 선택합니다. Create a child entry를 클릭합니다.  
 ![](/assets/phpLDAPadmin_grp_1.png)  
 
 Generic: Posix Group으로 선택합니다.  
@@ -77,6 +77,17 @@ Commit버튼을 클릭합니다.
 ![](/assets/phpLDAPadmin_grp_5.png)  
 
 같은 방식으로 dev 그룹도 생성한다.  
+![](/assets/phpLDAPadmin_grp_6.png)  
+
+**User 생성**
+왼쪽 트리메뉴에서 ou=users 엔트리를 클릭하고 Create a child entry를 클릭합니다.  
+![](/assets/phpLDAPadmin_user_1.png)  
+
+Custom user template으로 생성한 Pettra: User Account 템플릿을 클릭합니다.  
+![](/assets/phpLDAPadmin_user_2.png)  
+
+Account 정보를 입력한 후, Create Object를 클릭합니다.  
+![](/assets/phpLDAPadmin_user_3.png)  
 
 
 * **사용자 추가 방법은 아래 링크 참고**  
