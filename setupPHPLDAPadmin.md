@@ -87,10 +87,16 @@ Custom user template으로 생성한 Pettra: User Account 템플릿을 클릭합
 ![](/assets/phpLDAPadmin_user_2.png)  
 
 Account 정보를 입력한 후, Create Object를 클릭합니다. GID Numebr에서 dev 그룹을 선택합니다.  
+_(cn 이름이 실제 트리에 보일 이름입니다.)_  
 ![](/assets/phpLDAPadmin_user_3.png)  
 
 Commit버튼을 클릭합니다.  
 ![](/assets/phpLDAPadmin_user_4.png)  
+
+왼쪽 트리에 "cn=Roy Kang"가 추가된 것을 볼 수 있습니다.  
+![](/assets/phpLDAPadmin_user_5.png)  
+
+
 
 * **사용자 추가 방법은 아래 링크 참고**  
 <http://blog.hkwon.me/use-openldap-part1/>  
