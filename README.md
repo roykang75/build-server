@@ -13,7 +13,7 @@ build-server inistall script
 
 Contents  
 1. [openLDAP 설치 (docker)](https://github.com/roykang75/build-server/blob/master/setupOpenLDAP.md)  
-2. phpLDAPadmin 설치 (docker)  
+2. [phpLDAPadmin 설치 (docker)](https://github.com/roykang75/build-server/blob/master/setupPHPLDAPadmin.md)  
 3. GitLab 설치 (docker)  
 4. Jenkins 설치  
 5. build-pf-pro 설치 for Jenkins (docker)  
