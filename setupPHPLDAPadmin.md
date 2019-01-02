@@ -52,8 +52,11 @@ Create new entry here 를 선택하고 Generic: Organizational Units을 선택�
 이름 입력란에 "groups" 를 입력하고 Create Object를 클릭합니다.  
 ![](/assets/phpLDAPadmin_ou_2.png)  
 
+Commit버튼을 클릭합니다.  
+![](/assets/phpLDAPadmin_ou_3.png)  
 
-
+왼쪽 트리에 "ou=groups"가 추가된 것을 볼 수 있습니다.  
+![](/assets/phpLDAPadmin_ou_4.png)  
 
 
 * **사용자 추가 방법은 아래 링크 참고**  
