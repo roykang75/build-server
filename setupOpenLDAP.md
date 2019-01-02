@@ -10,7 +10,6 @@
 #    --name openLDAP \
 #    --restart always \
 #    --volume /data/srv/slapd/config:/etc/ldap/slapd.d \
-#    --volume /data/srv/slapd/config:/etc/ldap/slapd.d \
 #    --volume /etc/localtime:/etc/localtime:ro \
 #    --env LDAP_DOMAIN="pettra.com" \
 #    --env LDAP_ADMIN_PASSWORD="P@ssword"
@@ -19,7 +18,7 @@
 
 * **docker 명령어**
 ```
-docker run --detach --hostname ldap.pettra.com --publish 389:389 --publish 689:689 --name openLDAP --restart always --volume /data/srv/slapd/config:/etc/ldap/slapd.d --volume /data/srv/slapd/config:/etc/ldap/slapd.d --volume /etc/localtime:/etc/localtime:ro --env  LDAP_DOMAIN="pettra.com" --env LDAP_ADMIN_PASSWORD="P@ssword" osixia/openldap:1.2.2
+docker run --detach --hostname ldap.pettra.com --publish 389:389 --publish 689:689 --name openLDAP --restart always --volume /data/srv/slapd/config:/etc/ldap/slapd.d --volume /etc/localtime:/etc/localtime:ro --env  LDAP_DOMAIN="pettra.com" --env LDAP_ADMIN_PASSWORD="P@ssword" osixia/openldap:1.2.2
 ```
 * **openLDAP 검증**
 ```
