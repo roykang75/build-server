@@ -61,10 +61,22 @@ Commit버튼을 클릭합니다.
 똑같은 방법으로 "users" OU를 생성한다.  
 
 **Group 생성**
-그룹은 관리자 그룹과 개발자 그룹 2개 그룹으로 나누어 설정합니다. 왼쪽 트리에서 ou=groups 를 선택합니다.  
+그룹은 관리자 그룹과 개발자 그룹 2개 그룹으로 나누어 설정합니다. 왼쪽 트리에서 ou=groups 를 선택합니다. "Create a child entry"를 클릭합니다.  
 ![](/assets/phpLDAPadmin_grp_1.png)  
 
+Generic: Posix Group으로 선택합니다.  
+![](/assets/phpLDAPadmin_grp_2.png)  
 
+Group이름은 "admin" 으로 채워넣고 Creae Object 버튼을 클릭합니다.  
+![](/assets/phpLDAPadmin_grp_3.png)  
+
+Commit버튼을 클릭합니다.  
+![](/assets/phpLDAPadmin_grp_4.png)  
+
+왼쪽 트리에 "cn=admin"가 추가된 것을 볼 수 있습니다.  
+![](/assets/phpLDAPadmin_ou_5.png)  
+
+같은 방식으로 dev 그룹도 생성한다.  
 
 
 * **사용자 추가 방법은 아래 링크 참고**  
