@@ -74,7 +74,7 @@ Commit버튼을 클릭합니다.
 ![](/assets/phpLDAPadmin_grp_4.png)  
 
 왼쪽 트리에 "cn=admin"가 추가된 것을 볼 수 있습니다.  
-![](/assets/phpLDAPadmin_ou_5.png)  
+![](/assets/phpLDAPadmin_grp_5.png)  
 
 같은 방식으로 dev 그룹도 생성한다.  
 
