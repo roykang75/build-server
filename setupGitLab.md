@@ -71,24 +71,24 @@ sudo vim /etc/gitlab/gitlab.rb
 ```
 
 * **GitLab 명령어**  
-- 환경 파일 재로딩  
+**환경 파일 재로딩**  
 ```
 $ sudo gitlab-ctl reconfigure  
 ```
-- start all gitlab components  
+**Start all GitLab Components**  
 ```
 $ sudo gitlab-ctl start  
 ```
-- stop all gitlab components  
+**Stop all GitLab Components**  
 ```
 $ sudo gitlab-ctl stop  
 ```
-- restart all gitlab components  
+**Restart all GitLab Components**  
 ```
 $ sudo gitlab-ctl restart  
 ```
 
-* **GitLab Repository**
+* **GitLab Repository**  
 ```
 ./var/opt/gitlab/git-data/repositories/@account@
 ```
