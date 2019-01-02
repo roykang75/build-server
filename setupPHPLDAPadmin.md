@@ -39,7 +39,15 @@ Password: openLDAP의 admin password
 (4) admin으로 login을 하면 아래와 같은 화면을 볼 수 있습니다.  
 ![](/assets/phpLDAPadmin_4.png)  
 
+(5) 사용자를 추가하기 위한 작업을 진행합니다.  
+**조직구분(Organizational Units), 그룹(Groups), 사용자(Users) 등록하기**  
+디렉토리의 구조는 관리자가 원하는데로 사용할 수 있습니다. 조직이나 그룹 없이도 사용자를 등록할 수도 있고 활용할 수 있습니다. 본 문서는 가장 일반적인 구조인 조직구분(OU), 그룹(Group), 사용자(User) 단위로 디렉토리 구조를 생성하는 것으로 진행합니다.
 
+**Organizational Units 생성**  
+Organizational Units은 도메인 바로 아래 최상위 레벨의 논리적인 단위로 오브젝트들의 성격 별로 논리적인 단위로 묶을 있고 OU간에 관계도 설정할 수 있습니다. 예를 들어 그룹, 유저, 프린터, 어플리케이션 등으로 오브젝트 성격 별로 나누어 관리합니다.  
+  
+Create new entry here 를 선택하고 Generic: Organizational Units을 선택합니다.  
+![](/assets/phpLDAPadmin_ou_1.png)  
 
 * **사용자 추가 방법은 아래 링크 참고**  
 <http://blog.hkwon.me/use-openldap-part1/>  
