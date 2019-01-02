@@ -1,5 +1,4 @@
 # build-server
----
 
 ## 1. openLDAP 설치 (docker)
 ```
