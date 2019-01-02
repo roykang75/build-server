@@ -37,4 +37,5 @@ cat /etc/localtime
 (1) Cache: PC를 power on한 후, 방문한 DNS의 cache 정보이다. PC를 재부팅하면 사라진다.
 (2) hosts 파일
     - Linux: /etc/hosts
-    - Windows: 
+    - Windows: C:\windows\system32\drivers\etc\hosts 
+(3) DNS 서버    
