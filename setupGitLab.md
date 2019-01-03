@@ -93,6 +93,8 @@ Sign-in Restrictions에서 Sign-up enabled를 LDAP에 등록된 유저로만 사
 Logout후, GitLab에 재접속하면 아래와 같이 Register 탭이 사라진 것을 확인할 수 있습니다.  
 ![](/assets/gitlab_openLDAP_6.png)  
 
+LDAP를 선택한 후, openLDAP에 등록한 ID와 Password로 login이 가능합니다.  
+
 * **GitLab 환경설정 파일**
 ```
 sudo vim /etc/gitlab/gitlab.rb
