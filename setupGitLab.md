@@ -90,6 +90,8 @@ Password : 5iveL!fe(초기패스워드)  <== 확인 필요
 Sign-in Restrictions에서 Sign-up enabled를 LDAP에 등록된 유저로만 사용하기 위해서 체크 해제합니다. Save버튼으로 저장합니다.  
 ![](/assets/gitlab_openLDAP_5.png)  
 
+Logout후, GitLab에 재접속하면 아래와 같이 Register 탭이 사라진 것을 확인할 수 있습니다.  
+![](/assets/gitlab_openLDAP_6.png)  
 
 * **GitLab 환경설정 파일**
 ```
