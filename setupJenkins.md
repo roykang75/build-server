@@ -50,3 +50,23 @@ $ sudo apt-get install jenkins
 
 * Jenkins Ready
     ![](/assets/jenkins_setup_5.png)  
+
+* **Jenkins와 GitLab 연동**  
+
+GitLab 연동을 위한 plugin 설치해야 합니다. Jenkins에 admin 권한으로 로그인합니다. 왼쪽 메뉴에서 "Jenkins 관리"를 클릭합니다.  
+![](/assets/jenkins_gitlab_1.png)  
+
+"플러그인 관리" 메뉴를 클릭합니다.  
+![](/assets/jenkins_gitlab_2.png)  
+
+아래 플러그인을 설치합니다.  
+```
+Gitlab Authentication plugin
+Gitlab Hook Plugin
+GitLab Logo Plugin
+Gitlab Merge Request Builder
+GitLab Plugin
+Violation Comments to GitLab Plugin
+LDAP Plugin
+```
+
