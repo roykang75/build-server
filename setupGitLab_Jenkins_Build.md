@@ -10,7 +10,7 @@
 암호확인 | P@ssword
 이름(cn) | pettra autobuild 
 이메일주소 | roykang75@gmail.com
-`
+
 ![](/assets/phpLDAPadmin_jenkins_user_1.png)  
 
 **2. GitLab과 openLDAP 연동**  
