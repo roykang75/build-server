@@ -34,4 +34,13 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDC4xvlMyJ5rQgq/VyYvzHBdB818Eh4FDHqPM77mQBA
 복사한 pettra 계정의 public ssh key를 Key 입력 박스에 붙이기합니다. Add key 버튼을 클릭하여 저장합니다.  
 ![](/assets/gitlab_jenkins_build_3.png)  
 
-GitLab Personal Access Token을 발급받기 위해 Access Tokens 메뉴로 이동합니다.
+GitLab Personal Access Token을 발급받기 위해 Access Tokens 메뉴로 이동합니다.  
+![](/assets/gitlab_jenkins_build_4.png)  
+
+Personal Access Tokens에서 Name을 jenkins로 expires at을 2030-12-31 로 설정합니다. Scope는 3개 모두 선택을 한 후, Create personal access token 버튼을 클릭합니다.    
+![](/assets/gitlab_jenkins_build_5.png)  
+
+Acitve Personal Access Tokens에 생성된 token을 확인할 수 있습니다.  
+![](/assets/gitlab_jenkins_build_6.png)  
+
+Jenkins 사이트에 접속하여 admin 계정으로 로그인합니다.  
