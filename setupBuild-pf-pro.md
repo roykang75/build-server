@@ -74,3 +74,8 @@ $ ll ~/.ssh/id_rsa*
 -rw-r--r-- 1 pettra pettra  390 Sep  4 14:28 /home/pettra/.ssh/id_rsa.pub
 ```
 
+pettra 계정의 git config 정보를 입력합니다.  
+```
+$ git config --global user.name "pettra"
+$ git config --global user.email "roykang75@gmail.com"
+```
