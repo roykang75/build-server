@@ -34,3 +34,4 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDC4xvlMyJ5rQgq/VyYvzHBdB818Eh4FDHqPM77mQBA
 복사한 pettra 계정의 public ssh key를 Key 입력 박스에 붙이기합니다. Add key 버튼을 클릭하여 저장합니다.  
 ![](/assets/gitlab_jenkins_build_3.png)  
 
+GitLab Personal Access Token을 발급받기 위해 Access Tokens 메뉴로 이동합니다.
