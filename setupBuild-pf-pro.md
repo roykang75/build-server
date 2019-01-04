@@ -5,7 +5,8 @@
 # $ docker run --name build-pf-pro -v /data/work/src:/work -it ubuntu:16.04 /bin/bash
 ```
 
-**docker 명령어**
+**docker 명령어**  
+서버의 /data/work/src 위치에 실제 소스를 받고 빌드할 계획입니다. docker에서 같은 소스를 공유하기 위해서 -v 옵션을 사용하여 docker의 /work 폴더와 연결합니다.  
 ```
 $ docker run --name build-pf-pro -v /data/work/src:/work -it ubuntu:16.04 /bin/bash
 ```
@@ -44,25 +45,26 @@ ssh key를 생성합니다.
 ```
 $ ssh-keygen
 Generating public/private rsa key pair.
-Enter file in which to save the key (/root/.ssh/id_rsa): [Enter] 키 입력
-Enter passphrase (empty for no passphrase): [Enter] 키 입력
-Enter same passphrase again: [Enter] 키 입력
+Enter file in which to save the key (/home/pettra/.ssh/id_rsa): 
+Created directory '/home/pettra/.ssh'.
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
 Your identification has been saved in /home/pettra/.ssh/id_rsa.
 Your public key has been saved in /home/pettra/.ssh/id_rsa.pub.
 The key fingerprint is:
-20:e9:b0:5b:5a:2b:ad:e8:4d:e4:b3:a0:32:49:2d:97 evan
+SHA256:Vu5uFu2Op7/Y6TwqOjBklavD9PGyJ52G11yKaMlzlMU pettra@9782b558a2ad
 The key's randomart image is:
-+--[ RSA 2048]----+
-|                 |
-|     .           |
-|  . o .          |
-|   + . .         |
-|  o.=   S        |
-| ooE .           |
-|.o*+o            |
-|=.+oo            |
-|=o.o             |
-+-----------------+
++---[RSA 2048]----+
+|       .         |
+|      o          |
+|     . . ..      |
+|    + o  oE      |
+|   = o oSo..     |
+|    * o.+.. o    |
+|     = O =.=     |
+|      @ X.*=+.   |
+|     ..X +*BOo   |
++----[SHA256]-----+
 ```
 
 다음과 같이 개인키(id_rsa), 공개키(id_rsa.pub) 파일이 생성됩니다.  
