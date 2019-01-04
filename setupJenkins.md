@@ -18,10 +18,10 @@ $ sudo apt-get install jenkins
 ```
 
 **Jenkins 설정**  
-브라우져로 http://192.168.10.90:8080 (or http://localhost:8080) 
+브라우져로 http://192.168.10.90:8080 (or http://localhost:8080)  
 
-Jenkins unlock  
-: /var/lib/jenkins/secrets/initialAdminPassword 경로의 unlock code를 읽어서 입력합니다.
+Jenkins를 unlock합니다.  
+: /var/lib/jenkins/secrets/initialAdminPassword 경로의 unlock code를 읽어서 입력합니다.  
 ![](/assets/jenkins_unlock.png)
 
 ```
@@ -29,12 +29,12 @@ $ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 b08ef74bbb1a4673bc1a59dea2de****
 ```
 
-Install suggested plugins 선택  
+Install suggested plugins 선택합니다.  
 ![](/assets/jenkins_setup_1.png)  
 
 ![](/assets/jenkins_setup_2.png)  
 
-Admin User 생성  
+Admin User를 생성합니다.  
 ![](/assets/jenkins_setup_3.png)  
 
 계정명 | admin
@@ -45,10 +45,10 @@ Admin User 생성
 이메일주소 | roykang75@gmail.com
 `
 
-Jenkins URL 설정
+Jenkins URL을 설정합니다.  
 ![](/assets/jenkins_setup_4.png)  
 
-Jenkins Ready
+Jenkins을 사용할 준비가 되었습니다.  
 ![](/assets/jenkins_setup_5.png)  
 
 **Jenkins와 GitLab 연동 준비**  
