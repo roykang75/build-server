@@ -43,4 +43,21 @@ Personal Access Tokens에서 Name을 jenkins로 expires at을 2030-12-31 로 설
 Acitve Personal Access Tokens에 생성된 token을 확인할 수 있습니다.  
 ![](/assets/gitlab_jenkins_build_6.png)  
 
-Jenkins 사이트에 접속하여 admin 계정으로 로그인합니다.  
+**5. Jenkins**  
+Jenkins 사이트에 접속하여 pettra(admin) 계정으로 로그인합니다. 왼쪽 메뉴에서 Credentials > System 을 클릭합니다. Global credentials를 클릭합니다.  
+![](/assets/gitlab_jenkins_build_7.png)  
+
+왼쪽 메뉴에서 Add credentials를 클릭한 후, GitLab Personal Access Token 복사한 한 것을 붙여넣기 합니다. 다른 값들은 아래와 같이 입력한 후, Save 버튼을 클릭합니다.  
+![](/assets/gitlab_jenkins_build_8.png)  
+
+Build-pf-pro docker로 이동하여, pettra 계정의 public ssh key를 복사합니다.  
+```
+$ cat /home/pettra/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDC4xvlMyJ5rQgq/VyYvzHBdB818Eh4FDHqPM77mQBAD2OYJoT3RFJg5uwuy0DZtuIsJpICtU85iSP7lFULtOVFCGpVmz4pA2II1i2u8VLUrdhPo9CzZhGzEVelXsYPORjJUxgpkTZwpE7PfTauoiSHrfgmD7kApxzU0/+RLBc8A9SK1yKI41Mi5c1M0+1MCmPji2B8moXnaCQFp25Cs0LtcPw8biirWvyxyFfti+hP7P06Ws6ukQaG+JqZHijmqrNJvTYSvRgGL6inuqKV+BFqM1lASl09AS3d1PHC5yfiunOQ+dnmPMOba7p8xZ2kYbvQAbfyQVWmB5mc/WGijL4d
+```
+
+Jenkins로 돌아와, Add credentials를 클릭합니다. Build-pf-pro docker의 pettra 계정에서 복사한 public ssh key키를 붙여넣기 합니다. 기타 항목은 아래와 같이 입력한 후, Save 버튼을 클릭합니다.  
+![](/assets/gitlab_jenkins_build_9.png)  
+
+아래와 같이 2개의 Global credentials가 등록된 것을 확인 할 수 있습니다.  
+![](/assets/gitlab_jenkins_build_10.png)  
