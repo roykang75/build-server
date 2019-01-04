@@ -61,12 +61,12 @@ GitLab 연동을 위한 plugin 설치해야 합니다. Jenkins에 admin 권한�
 
 아래 플러그인을 설치합니다.  
 ```
-Gitlab Authentication plugin
-Gitlab Hook Plugin
-GitLab Logo Plugin
-Gitlab Merge Request Builder
-GitLab Plugin
-Violation Comments to GitLab Plugin
-LDAP Plugin
+- Gitlab Authentication plugin
+- Gitlab Hook Plugin
+- GitLab Logo Plugin
+- Gitlab Merge Request Builder
+- GitLab Plugin
+- Violation Comments to GitLab Plugin
+- LDAP Plugin
 ```
 
