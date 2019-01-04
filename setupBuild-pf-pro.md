@@ -40,3 +40,35 @@ $ sudo apt-get install -y software-properties-common
 $ sudo add-apt-repository ppa:openjdk-r/ppa  
 $ sudo apt-get update && sudo apt-get install -y openjdk-7-jdk 
 ```
+ssh key를 생성합니다.  
+```
+$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/root/.ssh/id_rsa): [Enter] 키 입력
+Enter passphrase (empty for no passphrase): [Enter] 키 입력
+Enter same passphrase again: [Enter] 키 입력
+Your identification has been saved in /home/pettra/.ssh/id_rsa.
+Your public key has been saved in /home/pettra/.ssh/id_rsa.pub.
+The key fingerprint is:
+20:e9:b0:5b:5a:2b:ad:e8:4d:e4:b3:a0:32:49:2d:97 evan
+The key's randomart image is:
++--[ RSA 2048]----+
+|                 |
+|     .           |
+|  . o .          |
+|   + . .         |
+|  o.=   S        |
+| ooE .           |
+|.o*+o            |
+|=.+oo            |
+|=o.o             |
++-----------------+
+```
+
+다음과 같이 개인키(id_rsa), 공개키(id_rsa.pub) 파일이 생성됩니다.  
+```
+$ ll ~/.ssh/id_rsa*
+-rw------- 1 pettra pettra 1743 Sep  4 14:28 /home/pettra/.ssh/id_rsa
+-rw-r--r-- 1 pettra pettra  390 Sep  4 14:28 /home/pettra/.ssh/id_rsa.pub
+```
+
