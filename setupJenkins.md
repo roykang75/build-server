@@ -37,7 +37,7 @@ Install suggested plugins 선택합니다.
 Admin User를 생성합니다.  
 ![](/assets/jenkins_setup_3.png)  
 
-계정명 | admin
+계정명 | pettra
 ----|------
 암호 | P@ssword
 암호확인 | P@ssword
