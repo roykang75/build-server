@@ -5,12 +5,12 @@
 # $ docker run --name build-pf-pro -v /data/work/src:/work -it ubuntu:16.04 /bin/bash
 ```
 
-* **docker 명령어**
+**docker 명령어**
 ```
 $ docker run --name build-pf-pro -v /data/work/src:/work -it ubuntu:16.04 /bin/bash
 ```
 
-* **Android 5.1 build를 위한 utilities 설치**
+**Android 5.1 build를 위한 utilities 설치**
 
 ubuntu 16.04 update 하고, docker에 기본적으로 탑재되어 있지 않은 sudo와 vim을 설치합니다.  
 ```
