@@ -39,6 +39,7 @@ cat /etc/localtime
 (2) hosts 파일  
     - Linux: /etc/hosts
     - Windows: C:\windows\system32\drivers\etc\hosts  
+    
 (3) DNS 서버    
 
 * **인터넷 지식**  
