@@ -75,7 +75,7 @@ EOS
 브라우져를 통해 GitLab에 접속합니다.  
 ![](/assets/gitlab_openLDAP_1.png)  
 
-LDAP 로그인 탭이 보이고 이제 LDAP에 등록된 유저로 로그인이 가능합니다. 하지만 먼저 신규 가입 기능 제거 등의 어드민 설정을 위해서 Standard 모드로 root 유저로 로그인 합니다.  
+LDAP 로그인 탭이 보이고 이제 LDAP에 등록된 유저로 로그인이 가능합니다. 하지만 먼저 신규 가입 기능 제거 등의 어드민 설정을 위해서 Standard 탭을 클릭한 후, root 유저로 로그인 합니다.  
 Username : root  
 Password : 5iveL!fe(초기패스워드)  <== 확인 필요  
 초기 패스워드는 위와 같고 로그인 후 새로운 패스워드를 입력합니다.  
