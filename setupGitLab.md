@@ -34,7 +34,12 @@ $ tar xfvz gitlab.tgz # 현재 폴더에 압축을 해제합니다.
 
 * **openLDAP 서버와 연동**  
 
-초기 설정은 기본적으로 ldap 기능은 disable된 상태입니다. ldap 연결 활성화를 위해 설정 파일을 수정합니다. GitLab docker에 접속합니다. GitLab의 configuration 파일을 열고, 아래 내용을 추가합니다.  (앞서 설치한 ldap 정보를 추가합니다.)
+초기 설정은 기본적으로 ldap 기능은 disable된 상태입니다. ldap 연결 활성화를 위해 설정 파일을 수정합니다.  
+GitLab docker에 접속합니다.  
+```
+docker exec -it gitlab /bin/bash
+```
+GitLab의 configuration 파일을 열고, 아래 내용을 추가합니다.  (앞서 설치한 ldap 정보를 추가합니다.)
 
 ```
 # vim /etc/gitlab/gitlab.rb
