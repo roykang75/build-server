@@ -1,7 +1,8 @@
-# GitLab.com에 있는 소스를 나의 로컬 GitLab 서버로 마이그레이션하기
+# Integrate your server with GitLab.com
 
 
 **GitLab.com에서의 설정**  
+
 (1) GitLab.com에 로그인하세요.  
 (2) 오른쪽 상단에서 아바타를 클릭하고 Setting을 클릭하세요.  
 (3) 왼쪽 메뉴에서 Applications를 선택합니다.  
