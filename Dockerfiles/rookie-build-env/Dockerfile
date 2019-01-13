@@ -36,7 +36,8 @@ RUN    apt-get -y install u-boot-tools
 RUN    apt-get -y install python
 RUN    apt-get -y install make
 RUN    apt-get -y install ccache
-RUN    apt-get -y install lib32z1
+RUN    apt-get -y install lib32z-dev
+RUN    apt-get -y install libgl1-mesa-dev
 
 #COPY TOOLCHAIN
 
