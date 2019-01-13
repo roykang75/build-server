@@ -28,10 +28,13 @@ GitLab configuration file을 편집합니다.
 $ sudo vim /etc/gitlab/gitlab.rb
 ```
 OmniAuth Settings로 이동하여, 아래 내용을 추가합니다.  
-name: gitlab을 표기해 주세요.
-app_id: 위의 _GitLab.com에서의 설정_ 에서 Save를 하였을 때 생성된 ID 입니다.  
-app_secret: 위의 _GitLab.com에서의 설정_ 에서 Save를 하였을 때 생성된 Secret 입니다.  
-args: 아래와 같이 입력해 주세요.
+
+| 항목 | 설명 |
+|---|---|
+| name | gitlab을 표기해 주세요. |
+| app_id | 위의 _GitLab.com에서의 설정_ 에서 Save를 하였을 때 생성된 ID 입니다. | 
+| app_secret | 위의 _GitLab.com에서의 설정_ 에서 Save를 하였을 때 생성된 Secret 입니다. | 
+| args | 아래와 같이 입력해 주세요.|
 
 ```
  gitlab_rails['omniauth_providers'] = [
