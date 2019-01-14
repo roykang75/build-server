@@ -39,7 +39,8 @@ GitLab docker에 접속합니다.
 ```
 docker exec -it gitlab /bin/bash
 ```
-GitLab의 configuration 파일을 열고, 아래 내용을 추가합니다.  (앞서 설치한 ldap 정보를 추가합니다.)
+GitLab의 configuration 파일을 열고, 아래 내용을 추가합니다.  (앞서 설치한 ldap 정보를 추가합니다.)  
+참고 사이트:  [Setting up LDAP sign-in](https://docs.gitlab.com/omnibus/settings/ldap.html)
 
 ```
 # vim /etc/gitlab/gitlab.rb
