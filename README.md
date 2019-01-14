@@ -33,6 +33,9 @@ sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
 cat /etc/localtime
 ```
 
+## Docker  
+Docker Study: [가장 빨리 만나는 Docker](http://pyrasis.com/docker.html)
+
 ## 네트워크 기본 지식  
 **Client가 DNS를 찾는 순서**  
 (1) Cache: PC를 power on한 후, 방문한 DNS의 cache 정보이다. PC를 재부팅하면 사라진다.  
