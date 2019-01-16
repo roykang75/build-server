@@ -39,6 +39,9 @@ RUN    apt-get -y install ccache
 RUN    apt-get -y install lib32z-dev
 RUN    apt-get -y install libgl1-mesa-dev
 
+#CREATE USER
+RUN    useradd roy
+
 #COPY TOOLCHAIN
 
 #ETC UTIL INSTALL
