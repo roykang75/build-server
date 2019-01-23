@@ -1,7 +1,12 @@
 # MAKE Docker image
+```
 docker build --tag rookie-build-env:0.1 .
+```
 
-docker run -it --name rookie-build-env --restart always --volume /home/roy:/home/roy --volume /etc/passwd:/etc/passwd --volume /data/work/src:/work/src rookie-build-env:0.1
+**Docker run***
+```
+docker run -it --name rookie-build-env --restart always --volume /home/roy:/home/roy --volume /etc/passwd:/etc/passwd --volume /data/work/src:/work/src --volume /etc/localtime:/etc/localtime:ro rookie-build-env:0.1
+```
 
 ```
 $ sudo cat /etc/passwd
