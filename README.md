@@ -11,17 +11,11 @@ build-server inistall script
 * **시스템 구성도**
 ![](/assets/build_system.png)  
 
+## 사전 작업  
+사전 작업을 반듯이 진행하고 서버를 설치해야 합니다.  
+만약 이를 지키지 않는 경우, 설치 또는 운영에러가 발생할 수 있습니다.  
 
-Contents  
-1. [openLDAP 설치 (docker)](https://github.com/roykang75/build-server/blob/master/setupOpenLDAP.md)  
-2. [phpLDAPadmin 설치 (docker)](https://github.com/roykang75/build-server/blob/master/setupPHPLDAPadmin.md)  
-3. [GitLab 설치 (docker)](https://github.com/roykang75/build-server/blob/master/setupGitLab.md)  
-4. [Jenkins 설치](https://github.com/roykang75/build-server/blob/master/setupJenkins.md)  
-5. [build-pf-pro 설치 for Jenkins (docker)](https://github.com/roykang75/build-server/blob/master/setupBuild-pf-pro.md)  
-6. [GitLab - Jenkins - Build docker간 연동](https://github.com/roykang75/build-server/blob/master/setupGitLab_Jenkins_Build.md)
-7. [Netdata 설치 (서버 모니터링 툴)](https://github.com/roykang75/build-server/blob/master/setupNetdata.md)  
-
-## 서버 업데이트
+### 서버 업데이트  
 ```
 #! /bin/bash
 
@@ -32,6 +26,30 @@ sudo apt-get install -y ldap-utils # ldapsearch utilities
 sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
 cat /etc/localtime
 ```
+
+### 디렉토리 구조  
+본 예제는 pettra 계정이 있다는 가정하에 작업이 진행됩니다.  
+/data 는 다른 HDD의 mount 디렉토리일 수도 있고, 일반 디렉토리일 수도 있습니다.  
+
+/data가 일반 디렉토리인 경우는 다음과 같이 처리합니다.  
+```
+$ sudo mkdir /data
+$ sudo chown pettra data # data 디렉토리의 owner를 pettra로 변경합니다.
+$ sudo chgrp pettra data # data 디렉토리의 group을 pettra로 변경합니다.
+$ ls -al
+drwxr-xr-x   3 pettra  pettra   4096  6월  3 14:55 data/
+$ cd data
+$ mkdir srv  # 앞으로 설치할 서버들의 configuration file들을 저장할 위치를 생성합니다.
+```
+
+Contents  
+1. [openLDAP 설치 (docker)](https://github.com/roykang75/build-server/blob/master/setupOpenLDAP.md)  
+2. [phpLDAPadmin 설치 (docker)](https://github.com/roykang75/build-server/blob/master/setupPHPLDAPadmin.md)  
+3. [GitLab 설치 (docker)](https://github.com/roykang75/build-server/blob/master/setupGitLab.md)  
+4. [Jenkins 설치](https://github.com/roykang75/build-server/blob/master/setupJenkins.md)  
+5. [build-pf-pro 설치 for Jenkins (docker)](https://github.com/roykang75/build-server/blob/master/setupBuild-pf-pro.md)  
+6. [GitLab - Jenkins - Build docker간 연동](https://github.com/roykang75/build-server/blob/master/setupGitLab_Jenkins_Build.md)
+7. [Netdata 설치 (서버 모니터링 툴)](https://github.com/roykang75/build-server/blob/master/setupNetdata.md)  
 
 ## Docker  
 Docker Study: [가장 빨리 만나는 Docker](http://pyrasis.com/docker.html)
