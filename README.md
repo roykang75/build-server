@@ -40,6 +40,12 @@ $ ls -al
 drwxr-xr-x   3 pettra  pettra   4096  6월  3 14:55 data/
 $ cd data
 $ mkdir srv  # 앞으로 설치할 서버들의 configuration file들을 저장할 위치를 생성합니다.
+$ ls -al
+합계 12
+drwxr-xr-x  3 pettra  pettra  4096  6월  3 14:55 ./
+drwxr-xr-x 25 root root 4096  6월  3 14:54 ../
+drwxrwxr-x  3 pettra  pettra  4096  6월  3 14:55 srv/
+
 ```
 
 ## Contents  
