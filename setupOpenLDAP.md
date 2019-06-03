@@ -31,7 +31,7 @@ $ sudo apt install ldap-utils
 간단한 옵션은 다음과 같습니다.  
 -w: admin password를 command line에서 입력 받음  
 ```
-$ ldapsearch -x -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=admin,dc=pettra,dc=com" -w P@ssword  
+$ ldapsearch -x -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=admin,dc=pettra,dc=com" -w P@ssword
 <<검색 결과 출력>>  
 ```
 -W: admin password를 키보드에서 입력 받음  
