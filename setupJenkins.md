@@ -37,12 +37,13 @@ Install suggested plugins 선택합니다.
 Admin User를 생성합니다.  
 ![](/assets/jenkins_setup_3.png)  
 
-계정명 | pettra
+명칭 | 설정값
 ----|------
+계정명 | root
 암호 | P@ssword
 암호확인 | P@ssword
 이름 | admin
-이메일주소 | roykang75@gmail.com
+이메일주소 | roykang@dogtra.com
 `
 
 Jenkins URL을 설정합니다.  
@@ -50,6 +51,51 @@ Jenkins URL을 설정합니다.
 
 Jenkins을 사용할 준비가 되었습니다.  
 ![](/assets/jenkins_setup_5.png)  
+
+
+**빌드 프로젝트 생성**  
+다음과 같이 빌드 프로젝트를 생성합니다.  
+
+Jenkins 왼쪽 메뉴에서 "새로운 Item"을 선택하거나, "새 작업"을 선택합니다.  
+![](/assets/jenkins_project_1.png)  
+
+"Enter an item name"에 생성하려는 프로젝트 이름을 입력하고 "Freestyle project"를 선택합니다.  
+화면 하단의 [OK] 버튼을 선택합니다.  
+![](/assets/jenkins_project_2.png)  
+
+다른 부분은 default 값으로 두고, Build 섹션에서 "Execute shell"을 선택합니다.  
+![](/assets/jenkins_project_3.png)  
+
+"Execute shell"의 Command 입력란에 아래 내용을 복사해서 붙여 넣습니다.  
+
+```
+#!/bin/bash
+
+echo ""
+echo "==============================================="
+whoami
+echo "==============================================="
+
+docker exec -u 1000 -i lollipop-build-env bash /work/src/pf-pro-common-v0.1.5/run_build.sh
+```
+
+![](/assets/jenkins_project_4.png)  
+
+[저장] 버튼을 선택합니다.  
+
+**주의**  
+아래 명령에서 /work/src/pf-pro-common-v0.1.5/run_build.sh 의 경로에 주의해야 합니다.  
+```
+docker exec -u 1000 -i lollipop-build-env bash /work/src/pf-pro-common-v0.1.5/run_build.sh
+```
+
+프로젝트가 정상적으로 생성되면 아래와 같은 화면이 나타납니다.  
+![](/assets/jenkins_project_5.png)  
+
+프로젝트를 빌드하려면 왼쪽 메뉴의 "Build Now"를 선택합니다.  
+![](/assets/jenkins_project_6.png)  
+
+
 
 **Jenkins와 GitLab 연동 준비**  
 
