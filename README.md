@@ -20,7 +20,7 @@ build-server inistall script
 #! /bin/bash
 
 sudo apt-get update && sudo apt-get upgrade -y
-sudo apt-get install -y ldap-utils # ldapsearch utilities
+sudo apt-get install -y ldap-utils git
 
 # TimeZone을 Seoul로 설정
 sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
