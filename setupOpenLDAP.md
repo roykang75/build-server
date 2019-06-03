@@ -36,7 +36,7 @@ $ ldapsearch -x -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=admin,dc=pe
 ```
 -W: admin password를 키보드에서 입력 받음  
 ```
-$ ldapsearch -x -W -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=admin,dc=pettra,dc=com"  
+$ ldapsearch -x -W -H ldap://ldap.pettra.com -b dc=pettra,dc=com -D "cn=admin,dc=pettra,dc=com"
 Enter LDAP Password: admin password  
 <<검색 결과 출력>>  
 ```
