@@ -42,7 +42,7 @@ $ cd data
 $ mkdir srv  # 앞으로 설치할 서버들의 configuration file들을 저장할 위치를 생성합니다.
 ```
 
-Contents  
+## Contents  
 1. [openLDAP 설치 (docker)](https://github.com/roykang75/build-server/blob/master/setupOpenLDAP.md)  
 2. [phpLDAPadmin 설치 (docker)](https://github.com/roykang75/build-server/blob/master/setupPHPLDAPadmin.md)  
 3. [GitLab 설치 (docker)](https://github.com/roykang75/build-server/blob/master/setupGitLab.md)  
