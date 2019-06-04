@@ -104,7 +104,14 @@ http://www.gitlab.com 에 접속합니다.
 ![](/assets/gitlab_tag_1.png)  
 
 위의 name 속성을 보면 "platform/frameworks/base" 입니다. 이는 위에서 설명하였듯이 remote PC(git server or gitlab)의 저장 위치를 의미합니다.
-그룹에서 위치를 찾아봅니다. 이 프로젝트 git tree의 최상단은 "pettra/android" 입니다. 그 이하에서 "platform/frameworks/base"를 찾습니다.  
+그룹에서 위치를 찾아봅니다. 이 프로젝트 git tree의 최상단은 "pettra/android" 입니다. 그 이하에서 "platform/frameworks/base"를 찾습니다. 
+최상단의 정보는 pf-pro-common-v0.1.7.xml 의 상단에서 확인할 수 있습니다.  
+```
+<remote name="pettra_aosp"
+        fetch="ssh://git@gitlab.com/pettra/android" />
+
+```
+
 ![](/assets/gitlab_tag_2.png)  
 
 위의 이미지에 보면 "frameworks/opt"만 보이고 "frameworks/base"는 보이지 않습니다.  
