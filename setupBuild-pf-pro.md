@@ -138,3 +138,52 @@ $ cd /work
 ```
 $ ./device/nexell/tools/build.sh -b s5p6818_rookie
 ```
+
+Jenkins 빌드를 위해 pf-pro 디렉토리의 아래 스크립트를 run_build.sh 파일로 생성합니다.
+```
+#!/bin/bash
+
+cd /work/src/pf-pro-common-v0.1.5
+if [ -d .repo ]; then
+	repo forall -c 'pwd; git clean -xdf; git reset HEAD --hard'
+else
+	echo "There is no repo"
+	exit -1;
+fi
+
+echo "rm -rf out"
+rm -rf out
+
+echo "rm -rf result"
+rm -rf result
+
+repo init -u ssh://git@gitlab.com/pettra/android/platform/manifest.git -b master-pf -m pf-pro-common-v0.1.5.xml --depth=1
+
+repo sync -c -j12 --no-tags
+
+repo start master-pf --all
+
+device/nexell/tools/build.sh -b s5p6818_rookie -S pf-pro-common-v0.1.5 -R user 
+
+rm -rf ./result/boot
+rm -rf ./result/cache
+rm -rf ./result/root
+rm -rf ./result/system
+rm -rf ./result/userdata
+rm -rf ./result/dogtra
+#rm ./result/2ndboot_use.bin
+#rm ./result/root.img.gz
+
+buildResult=`date +%Y-%m-%d_%H-%M`.tar
+tar -cvf ${buildResult} ./result
+cp *.tar /work/buildResult
+rm -rf *.tar
+
+```
+
+
+
+
+
+
+
