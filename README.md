@@ -51,11 +51,12 @@ drwxrwxr-x  3 pettra  pettra  4096  6월  3 14:55 srv/
 ## Contents  
 1. [openLDAP 설치 (docker)](https://github.com/roykang75/build-server/blob/master/setupOpenLDAP.md)  
 2. [phpLDAPadmin 설치 (docker)](https://github.com/roykang75/build-server/blob/master/setupPHPLDAPadmin.md)  
-3. [GitLab 설치 (docker)](https://github.com/roykang75/build-server/blob/master/setupGitLab.md)  
+3. [GitLab 설치 (docker)](https://github.com/roykang75/build-server/blob/master/setupGitLab.md)  <== 현재 사용하고 있지 않음
 4. [build-pf-pro 설치 for Jenkins (docker)](https://github.com/roykang75/build-server/blob/master/setupBuild-pf-pro.md)  
 5. [Jenkins 설치](https://github.com/roykang75/build-server/blob/master/setupJenkins.md)  
-6. [GitLab - Jenkins - Build docker간 연동](https://github.com/roykang75/build-server/blob/master/setupGitLab_Jenkins_Build.md)
+6. [GitLab - Jenkins - Build docker간 연동](https://github.com/roykang75/build-server/blob/master/setupGitLab_Jenkins_Build.md)   <== 현재 사용하고 있지 않음
 7. [Netdata 설치 (서버 모니터링 툴)](https://github.com/roykang75/build-server/blob/master/setupNetdata.md)  
+8. [이미지 공식 릴리즈](https://github.com/roykang75/build-server/blob/master/imageRelease.md)  
 
 ## Docker  
 Docker Study: [가장 빨리 만나는 Docker](http://pyrasis.com/docker.html)
