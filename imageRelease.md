@@ -85,7 +85,7 @@ name | remote PC(gitlab.com) 에 저장되는 위치
 group | 그룹
 remote | remote repo 위치. 소스를 push 할 때 사용
 revision | 해당 git의 버전 정보
-`
+
 위 내용 중 버전 정보에 해당하는 revision="refs/tags/pf-pro-common-v0.1.6" 를 revision="refs/tags/pf-pro-common-v0.1.7" 로 변경합니다.  
 
 모두 변경이 끝나면 저장합니다.  
