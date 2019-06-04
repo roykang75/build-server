@@ -109,7 +109,6 @@ http://www.gitlab.com 에 접속합니다.
 ```
 <remote name="pettra_aosp"
         fetch="ssh://git@gitlab.com/pettra/android" />
-
 ```
 
 ![](/assets/gitlab_tag_2.png)  
@@ -146,7 +145,7 @@ Message에는 남기고 싶은 comment를 남기면 됩니다.
 
 **추가한 버전의 xml을 이용하여 소스 받기**  
 수정한 git 들에 모두 태깅이 완료되면 v0.1.7에 대한 소스를 받아야 합니다.  
-PR-Pro의 master-pf 브랜치의 특정 버전의 소스를 받을 때는 다음과 같은 명령을 사용합니다.  
+PF-Pro의 master-pf 브랜치의 특정 버전의 소스를 받을 때는 다음과 같은 명령을 사용합니다.  
 아래 예는 v0.1.7 버전 소스를 받는 예입니다.  
 ```
 $ repo init -u ssh://git@gitlab.com/pettra/android/platform/manifest.git -b master-pf -m pf-pro-common-v0.1.7.xml
