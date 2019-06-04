@@ -90,6 +90,27 @@ revision | 해당 git의 버전 정보
 
 모두 변경이 끝나면 저장합니다.  
 
+새로 생성한 pf-pro-common-v0.1.7.xml 파일을 git에 반영합니다.  
+```
+$ git add .
+$ git commit -m "[PP-112] [ANDROID] PF-PRO 0.1.7 release for US field test"
+[master-pf 9b3122e] [PP-112] [ANDROID] PF-PRO 0.1.7 release for US field test
+ 1 file changed, 423 insertions(+)
+ create mode 100644 pf-pro-common-v0.1.7.xml
+$ git push origin
+오브젝트 개수 세는 중: 3, 완료.
+Delta compression using up to 16 threads.
+오브젝트 압축하는 중: 100% (3/3), 완료.
+오브젝트 쓰는 중: 100% (3/3), 4.73 KiB | 0 bytes/s, 완료.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: 
+remote: To create a merge request for master-pf, visit:
+remote:   https://gitlab.com/pettra/android/platform/manifest/merge_requests/new?merge_request%5Bsource_branch%5D=master-pf
+remote: 
+To ssh://git@gitlab.com/pettra/android/platform/manifest.git
+   643eb3f..9b3122e  master-pf -> master-pf
+```
+
 
 **gitlab.com 에 TAG 추가**  
 버전 정보(revision) 를 변경한 git에 TAG를 설정하는 작업을 진행합니다.  
