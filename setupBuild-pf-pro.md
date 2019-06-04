@@ -95,3 +95,46 @@ Warning: Permanently added 'gitlab.com' (ECDSA) to the list of known hosts.
 $ ssh -T git@gitlab.com
 Welcome to GitLab, @username!
 ```
+
+**소스 받기**  
+작업 디렉토리로 이동하여, pf-pro 폴더를 생성합니다.
+```
+$ cd /data/work
+$ mkdir pf-pro
+```
+
+repo 를 설치합니다.  
+```
+$ sudo apt-get update
+$ sudo apt-get install -y repo
+```
+
+소스를 받습니다. 
+```
+$ repo init -u ssh://git@gitlab.com/pettra/android/platform/manifest.git -b master-pf
+$ repo sync -j 8
+```
+
+git의 history 없이 소스 받기 (빠름. 단순 빌드용으로 많이 사용하는 방법)
+```
+$ repo init -u ssh://git@gitlab.com/pettra/android/platform/manifest.git -b master-pf --depth=1
+$ repo sync -j 8 --no-tags
+```
+
+**소스 빌드(docker 이용)**  
+이전에 설치한 ocker을 이용하여 빌드를 진행합니다.  
+먼저 docker에 접속합니다.  
+```
+$ docker exec -it lollipop-build-env /bin/bash
+```
+
+docker에 연결한 후, pettra 계정으로 user 계정을 변경하고, 작업 디렉토리로 이동합니다.  
+```
+# su - pettra
+$ cd /work
+```
+
+빌드 명령을 이용하여 빌드를 진행합니다.  
+```
+$ ./device/nexell/tools/build.sh -b s5p6818_rookie
+```
