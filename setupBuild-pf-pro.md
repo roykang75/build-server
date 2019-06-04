@@ -180,10 +180,3 @@ cp *.tar /work/buildResult
 rm -rf *.tar
 
 ```
-
-
-
-
-
-
-
