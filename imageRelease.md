@@ -92,14 +92,14 @@ revision | 해당 git의 버전 정보
 
 
 **gitlab.com 에 TAG 추가**  
-버전 정보(revision) 를 변경한 git에 TAG 설정하는 작업을 진행합니다.  
-http://www.gitlab.com 에 접속합니다.  
+버전 정보(revision) 를 변경한 git에 TAG를 설정하는 작업을 진행합니다.  
 
-아래의 git을 기준으로 설명을 하겠습니다.  
+아래의 git을 기준으로 설명을 진행하겠습니다.  
 ```
 <project path="frameworks/base" name="platform/frameworks/base" groups="pdk" remote="pettra_aosp" revision="refs/tags/pf-pro-common-v0.1.6" />
 ```
 
+http://www.gitlab.com 에 접속합니다.  
 "Project"를 클릭하고, "Your projects"를 선택합니다.  
 ![](/assets/gitlab_tag_1.png)  
 
