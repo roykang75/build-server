@@ -182,7 +182,39 @@ $ repo sync -j 8 --no-tags
 $ repo start master-pf --all
 ```
 
-**이미지 빌드**  
+**Jenkins를 이용한 이미지 빌드**  
+jenkins site에 접속합니다.
+![](/assets/build_jenkins_1.png)  
+
+왼쪽 상단의 메뉴에서 [새로운 Item]을 선택합니다.  
+![](/assets/build_jenkins_2.png)  
+
+item 이름을 입력하고, "FreeStyle project"를 선택합니다. 그리고 [OK]를 클릭합니다.  
+여기서는 item name을 "pf-pro-common-v0.1.10 (user)"로 하겠습니다.  
+![](/assets/build_jenkins_3.png)  
+
+모두 default 값을 사용하고, Build만 아래와 같이 "Excute shell"을 선택합니다.  
+![](/assets/build_jenkins_4.png)  
+
+
+Excute shell의 command 란에 아래와 같이 입력합니다. 그리고 [저장]을 선택합니다.  
+```
+#!/bin/bash
+
+echo ""
+echo "==============================================="
+whoami
+echo "==============================================="
+
+docker exec -u 1000 -i lollipop-build-env bash /work/src/pf-pro-common-v0.1.10/run_build.sh
+```
+![](/assets/build_jenkins_5.png)  
+
+프로젝트를 빌드하려면 아래와 같은 화면에서 왼쪽 상단 메뉴 "Build Now"를 선택합니다.  
+![](/assets/build_jenkins_6.png)  
+
+
+**수동 이미지 빌드**  
 이미지의 빌드 방법은 아래와 같습니다.  
 ```
 # 소스를 받은 위치로 이동한 후, 아래 명령을 실행합니다.
