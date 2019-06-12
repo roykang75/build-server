@@ -1,6 +1,6 @@
 # Confluence
 
-## 9. Confluence 설치 (docker)
+## 10. Confluence 설치 (docker)
 ```
 # openLDAP 설치
 # 참고 사이트: https://github.com/osixia/docker-openldap
