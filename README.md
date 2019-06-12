@@ -58,6 +58,7 @@ drwxrwxr-x  3 pettra  pettra  4096  6월  3 14:55 srv/
 7. [Netdata 설치 (서버 모니터링 툴)](https://github.com/roykang75/build-server/blob/master/setupNetdata.md)  
 8. [이미지 공식 릴리즈](https://github.com/roykang75/build-server/blob/master/imageRelease.md)  
 9. [JIRA 설치 (docker)](https://github.com/roykang75/build-server/blob/master/setupJIRA.md)  
+10. [Confluence 설치 (docker)](https://github.com/roykang75/build-server/blob/master/setupConfluence.md)  
 
 ## Docker  
 Docker Study: [가장 빨리 만나는 Docker](http://pyrasis.com/docker.html)
